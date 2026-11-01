@@ -23,7 +23,7 @@ app.get('/api/health', (req: Request, res: Response) => {
   });
 });
 
-app.post('/api/research', (req: Request, res: Response) => {
+app.post('/api/research', async (req: Request, res: Response) => {
   try {
     const { query, mode } = req.body;
     if (!query || typeof query !== 'string') {
@@ -31,7 +31,7 @@ app.post('/api/research', (req: Request, res: Response) => {
       return;
     }
 
-    const result = runDeepResearch(query, mode || 'deep');
+    const result = await runDeepResearch(query, mode || 'deep');
     res.json(result);
   } catch (error: any) {
     console.error('Error executing deep research:', error);

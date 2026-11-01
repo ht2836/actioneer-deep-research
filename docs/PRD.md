@@ -106,3 +106,4 @@ A deep-research product prototype engineered specifically for investment profess
 2. **Token Efficiency:** Measurable >65% reduction in context tokens utilized compared to standard unconstrained agent scrapers.
 3. **Auditability:** 100% of runs logged to disk in `transcripts/` and accessible both in filesystem and UI.
 4. **Banker Polish:** Zero dark-mode glow, zero cartoonish UI; matches Goldman Sachs / Morgan Stanley research portal standards.
+

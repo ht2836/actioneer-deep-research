@@ -23,12 +23,20 @@ const seedQueries = [
   }
 ];
 
-for (const item of seedQueries) {
-  const result = runDeepResearch(item.query, 'deep');
-  console.log(`Generated and persisted transcript for ${item.ticker}: ${result.transcript.runId}`);
+async function seed() {
+  for (const item of seedQueries) {
+    const result = await runDeepResearch(item.query, 'deep');
+    console.log(`Generated and persisted transcript for ${item.ticker}: ${result.transcript.runId}`);
+  }
+
+  const dir = path.resolve(process.cwd(), 'transcripts');
+  const files = fs.readdirSync(dir);
+  console.log(`\nSuccessfully seeded ${files.length} transcript files in: ${dir}`);
+  files.forEach(f => console.log(` - ${f}`));
 }
 
-const dir = path.resolve(process.cwd(), 'transcripts');
-const files = fs.readdirSync(dir);
-console.log(`\nSuccessfully seeded ${files.length} transcript files in: ${dir}`);
-files.forEach(f => console.log(` - ${f}`));
+seed().catch(err => {
+  console.error('Failed to seed transcripts:', err);
+  process.exit(1);
+});
+

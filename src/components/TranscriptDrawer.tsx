@@ -303,3 +303,4 @@ export const TranscriptDrawer: React.FC<TranscriptDrawerProps> = ({
     </div>
   );
 };
+

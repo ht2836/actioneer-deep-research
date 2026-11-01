@@ -27,3 +27,4 @@ COPY tsconfig.json ./
 EXPOSE 3000
 
 CMD ["npx", "tsx", "server/index.ts"]
+

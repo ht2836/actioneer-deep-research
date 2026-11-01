@@ -92,3 +92,4 @@ To make token efficiency a first-class feature for the recruiter and banker:
    - Cost Saved per 1,000 runs (e.g. `~$360 / 1k runs saved`)
    - Information Density Score (e.g. `4.2 data points / 100 tokens`)
 4. **Audit Step Logs:** The user can open the Transcript Modal and inspect the exact token count used at every phase (`tokensIn`, `tokensOut`, `durationMs`).
+

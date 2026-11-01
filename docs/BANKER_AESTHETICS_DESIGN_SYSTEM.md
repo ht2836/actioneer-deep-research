@@ -75,3 +75,4 @@ The output research memo is divided into 7 standardized sections:
 - **Copy / Export Quick Actions:** Instant "Copy Markdown", "Download JSON", and "Print Tear-Sheet" buttons.
 - **Step-by-Step Research Drawer:** Allows drilling down into the exact tool payloads and LLM prompts without cluttering the clean financial report.
 - **Filterable Presets:** Quick-select chips at the top so any evaluator can click between NVDA, PLTR, ASML, and AAPL with zero typing.
+

@@ -1,14 +1,18 @@
 import { BENCHMARK_MEMOS } from '../../src/data/stocksData';
 import { InvestmentThesisMemo, AgentTranscript, AgentStepTrace } from '../../src/types';
 import { saveTranscript } from './transcriptLogger';
+import { queryParallelDeepResearch } from './parallelClient';
 
-export function runDeepResearch(query: string, mode: 'deep' | 'fast' = 'deep'): {
+export async function runDeepResearch(query: string, mode: 'deep' | 'fast' = 'deep'): Promise<{
   memo: InvestmentThesisMemo;
   transcript: AgentTranscript;
-} {
+}> {
   const normalized = query.toUpperCase();
   const startTime = Date.now();
   const runId = `run_${Date.now()}_${Math.random().toString(36).substring(2, 7)}`;
+
+  // Optional Parallel API hook (executes if PARALLEL_API_KEY is configured in environment)
+  const parallelResult = await queryParallelDeepResearch(query);
 
   // 1. Identify Ticker
   let ticker = 'NVDA';
@@ -70,7 +74,7 @@ export function runDeepResearch(query: string, mode: 'deep' | 'fast' = 'deep'): 
       phase: 'PARALLEL_RETRIEVAL',
       name: 'Parallelized Institutional Document & Consensus Ingestion',
       description: `Dispatched parallel requests to Parallel Deep Research API, SEC EDGAR 10-K/10-Q parser, and consensus financial database.`,
-      toolCalled: 'ParallelDeepResearchAPI::BatchRetrieve',
+      toolCalled: parallelResult.source === 'parallel_api' ? 'ParallelWebSystems::TaskAPI::DeepResearch' : 'ParallelDeepResearchAPI::BatchRetrieve',
       inputPayloadSummary: `Sub-queries 1-4 dispatched across SEC 10-Q, Street Consensus Multiples, and Earnings Call Transcripts for ${baseMemo.companyName}.`,
       outputSummary: `Retrieved 4 raw data streams: SEC 10-Q (34,800 chars), Street Consensus Table (18,400 chars), Q3/Q4 Earnings Call Transcript Excerpts (42,600 chars), and Broker Note Multiples (21,500 chars). Raw tokens: ${baseMemo.tokenEfficiencyMetrics.rawRetrievedTokens.toLocaleString()}.`,
       tokensIn: 1250,

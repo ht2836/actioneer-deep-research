@@ -134,3 +134,4 @@ Expected output:
 - **Agent Orchestrator:** Multi-stage agent state machine with intent decomposition, parallel retrieval simulation, AST/regex boilerplate stripping, and schema extraction.
 - **Design System:** Wall Street institutional light mode (Midnight Navy `#0F172A`, Pure White `#FFFFFF`, Forest Emerald `#059669`, Crimson Ruby `#DC2626`, Tabular Monospace `#334155`).
 - **Packaging:** Dockerfile, single-command npm dev runner, Vite production bundler.
+

@@ -167,3 +167,4 @@ export const ResearchInput: React.FC<ResearchInputProps> = ({
     </div>
   );
 };
+

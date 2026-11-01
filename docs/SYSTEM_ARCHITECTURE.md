@@ -202,3 +202,4 @@ interface AgentTranscript {
 - **API Key Security:** `PARALLEL_API_KEY` and other credentials reside strictly in server-side environment variables and are never leaked to client bundles.
 - **Fail-Safe Mock Engine:** If network or API limits occur, the system falls back seamlessly to internal high-fidelity financial datasets, ensuring zero presentation crashes during live recruiter evaluation.
 - **Sanitization:** All synthesized markdown and tables are validated against schema boundaries prior to rendering.
+

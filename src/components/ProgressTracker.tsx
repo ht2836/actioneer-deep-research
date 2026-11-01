@@ -123,3 +123,4 @@ export const ProgressTracker: React.FC<ProgressTrackerProps> = ({ currentPhase }
     </div>
   );
 };
+
