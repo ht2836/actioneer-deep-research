@@ -1,0 +1,65 @@
+{
+  "runId": "run_1793560385665_zooga",
+  "timestamp": "2026-11-01T19:13:05.665Z",
+  "userPrompt": "Evaluate ASML's High-NA EUV lithography monopoly against escalating China export controls and cyclic foundry capex slowdowns.",
+  "ticker": "ASML",
+  "executionDurationMs": 2400,
+  "model": "gemini-1.5-pro-distill / parallel-research-v1",
+  "totalTokensBurned": 87360,
+  "rawInputTokens": 72100,
+  "distilledTokens": 13500,
+  "tokenSavingsPercentage": 79.7,
+  "costSavedUsd": 0.315,
+  "steps": [
+    {
+      "stepNumber": 1,
+      "phase": "DECOMPOSITION",
+      "name": "Intent Decomposition & Hypothesis Structuring",
+      "description": "Parsed user question into 4 targeted equity research vectors for ticker ASML.",
+      "toolCalled": "AgentQueryDecomposer",
+      "inputPayloadSummary": "Query: \"Evaluate ASML's High-NA EUV lithography monopoly against escalating China export controls and cyclic foundry capex slowdowns.\"",
+      "outputSummary": "Generated 4 sub-queries: (1) FY25/26 Revenue & Margin Trajectory, (2) Moat Durability & Competitive ASIC/Peer Threat, (3) Multiple Compression vs Historical Averages, (4) Bear Catalysts & Downside Tail Risks.",
+      "tokensIn": 340,
+      "tokensOut": 620,
+      "durationMs": 410
+    },
+    {
+      "stepNumber": 2,
+      "phase": "PARALLEL_RETRIEVAL",
+      "name": "Parallelized Institutional Document & Consensus Ingestion",
+      "description": "Dispatched parallel requests to Parallel Deep Research API, SEC EDGAR 10-K/10-Q parser, and consensus financial database.",
+      "toolCalled": "ParallelDeepResearchAPI::BatchRetrieve",
+      "inputPayloadSummary": "Sub-queries 1-4 dispatched across SEC 10-Q, Street Consensus Multiples, and Earnings Call Transcripts for ASML Holding N.V..",
+      "outputSummary": "Retrieved 4 raw data streams: SEC 10-Q (34,800 chars), Street Consensus Table (18,400 chars), Q3/Q4 Earnings Call Transcript Excerpts (42,600 chars), and Broker Note Multiples (21,500 chars). Raw tokens: 72,100.",
+      "tokensIn": 1250,
+      "tokensOut": 72100,
+      "durationMs": 1450
+    },
+    {
+      "stepNumber": 3,
+      "phase": "TOKEN_DISTILLATION",
+      "name": "Progressive Semantic Distillation & Schema Extraction",
+      "description": "Filtered legal disclaimers, repeated marketing boilerplate, HTML wrappers, and deduplicated news mentions. Converted unstructured context into typed numerical schemas.",
+      "toolCalled": "SemanticDistillationEngine::SchemaCompress",
+      "inputPayloadSummary": "Raw context stream of 72,100 tokens passed through entity extractors and tabular compressors.",
+      "outputSummary": "Context compressed to 13,500 tokens (79.7% reduction). Zero loss of core financial metrics (EPS, gross margins, EV/EBITDA, segment revenue).",
+      "tokensIn": 72100,
+      "tokensOut": 13500,
+      "durationMs": 820
+    },
+    {
+      "stepNumber": 4,
+      "phase": "THESIS_SYNTHESIS",
+      "name": "Banker-Grade Institutional Memo Generation",
+      "description": "Synthesized distilled context into structured institutional tear-sheet layout adhering to Goldman Sachs / Morgan Stanley research guidelines.",
+      "toolCalled": "BankerThesisSynthesizer::JSONSchema",
+      "inputPayloadSummary": "Structured distilled context (13,500 tokens) + Wall Street Tear-Sheet Prompt Guidelines.",
+      "outputSummary": "Generated OVERWEIGHT recommendation with $935 target price, 3 quantified thesis pillars, scenario sensitivity matrix, and catalyst timeline. Final output tokens: 1,140.",
+      "tokensIn": 14450,
+      "tokensOut": 1140,
+      "durationMs": 1120
+    }
+  ],
+  "finalMemoId": "memo_asml_20261102",
+  "summary": "Autonomous deep research executed for ASML (ASML Holding N.V.). Recommendation: OVERWEIGHT (Target: $935, Implied: +25.5%). Token compression saved 57,460 tokens (79.7% reduction)."
+}
