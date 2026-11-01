@@ -1,9 +1,9 @@
 {
-  "runId": "run_1793560385666_x38fa",
-  "timestamp": "2026-11-01T19:13:05.666Z",
+  "runId": "run_1793566036182_npidb",
+  "timestamp": "2026-11-01T20:47:16.183Z",
   "userPrompt": "Is Apple's Services gross margin and AI iPhone upgrade cycle sufficient to offset China market share loss and antitrust headwinds?",
   "ticker": "AAPL",
-  "executionDurationMs": 2400,
+  "executionDurationMs": 2401,
   "model": "gemini-1.5-pro-distill / parallel-research-v1",
   "totalTokensBurned": 101110,
   "rawInputTokens": 84200,

@@ -1,4 +1,4 @@
-# Deployment & Evaluation Guide
+﻿# Deployment & Evaluation Guide
 
 **Product:** Actioneer Deep Research Prototype  
 **Date:** November 2026  
@@ -81,4 +81,5 @@ Each run produces two paired files:
 2. `transcript_<timestamp>_<ticker>.md`: Human-readable Markdown summary with tabular metrics, ready to open in any markdown reader or share via email.
 
 In addition, assessors can click the **"Audit Transcripts"** button in the application UI to browse, inspect, and export all run logs directly.
+
 

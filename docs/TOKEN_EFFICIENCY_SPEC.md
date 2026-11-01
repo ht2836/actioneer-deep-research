@@ -1,4 +1,4 @@
-# Token Efficiency Specification & Benchmark Guide
+﻿# Token Efficiency Specification & Benchmark Guide
 
 **Product:** Actioneer Deep Research Prototype  
 **Topic:** Token Optimization, Progressive Distillation & Cost Reduction  
@@ -9,15 +9,15 @@
 ## 1. The Token Inefficiency Problem in Deep Research
 
 Standard AI deep research pipelines typically follow a brute-force pattern:
-1. Search Google/Bing/Tavily for 10–20 queries.
-2. Scrape raw HTML or markdown from all URLs (often 10,000–30,000 characters per page).
-3. Concat all raw text into a single prompt (60,000–120,000 tokens).
+1. Search Google/Bing/Tavily for 10-20 queries.
+2. Scrape raw HTML or markdown from all URLs (often 10,000-30,000 characters per page).
+3. Concat all raw text into a single prompt (60,000-120,000 tokens).
 4. Run inference with a frontier LLM (e.g. GPT-4o, Claude 3.5 Sonnet, Gemini 1.5 Pro).
 5. Produce a meandering 4,000-word response.
 
 ### Why This Fails for Enterprise & Banking Workflows:
-- **Financial Waste:** Costs $0.35–$0.90 per query. At enterprise scale (10,000 runs/month), this represents \$42,000–\$108,000/year on redundant context tokens.
-- **Latency Drag:** Processing 100k+ tokens through attention layers adds 20–45 seconds of TTFT (Time-To-First-Token).
+- **Financial Waste:** Costs $0.35-$0.90 per query. At enterprise scale (10,000 runs/month), this represents \$42,000-\$108,000/year on redundant context tokens.
+- **Latency Drag:** Processing 100k+ tokens through attention layers adds 20-45 seconds of TTFT (Time-To-First-Token).
 - **Context Degradation ("Lost in the Middle"):** Large context windows suffer from attention dispersion; vital financial metrics (e.g. Q3 free cash flow or gross margin inflection) get drowned in legal disclaimers and cookie policies.
 - **Low Information Density:** The resulting output contains fluffy transitions ("In conclusion, NVIDIA is a prominent player...") rather than dense financial metrics.
 
@@ -25,7 +25,7 @@ Standard AI deep research pipelines typically follow a brute-force pattern:
 
 ## 2. Actioneer's 4-Tier Token Efficiency Architecture
 
-Actioneer Deep Research achieves **70%–82% token reduction** through a multi-stage distillation architecture:
+Actioneer Deep Research achieves **70%-82% token reduction** through a multi-stage distillation architecture:
 
 ```
 +-------------------------------------------------------------------------+
@@ -92,4 +92,5 @@ To make token efficiency a first-class feature for the recruiter and banker:
    - Cost Saved per 1,000 runs (e.g. `~$360 / 1k runs saved`)
    - Information Density Score (e.g. `4.2 data points / 100 tokens`)
 4. **Audit Step Logs:** The user can open the Transcript Modal and inspect the exact token count used at every phase (`tokensIn`, `tokensOut`, `durationMs`).
+
 

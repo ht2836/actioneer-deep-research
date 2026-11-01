@@ -32,10 +32,10 @@ export const TokenModal: React.FC<TokenModalProps> = ({ isOpen, onClose }) => {
         <div className="p-6 space-y-5 text-xs text-slate-700">
           <div>
             <h4 className="font-bold text-sm text-slate-900 mb-1">
-              Why Standard Deep Research Fails on Cost & Token Efficiency
+              Why Standard Deep Research Struggles with Cost and Efficiency
             </h4>
             <p className="leading-relaxed text-slate-600">
-              Unconstrained deep research agents dump 40k–100k raw tokens of HTML, repeated filings, and legal disclaimers directly into LLM inference windows. This incurs massive latency, high hallucination rates ("lost in the middle"), and costs $0.35–$0.90 per query.
+              Unconstrained scrapers load 40,000 to 100,000 raw tokens of HTML, repetitive regulatory boilerplate, and legal notices directly into model prompts. That creates latency, prompts models to overlook critical data, and costs $0.35 to $0.90 per query.
             </p>
           </div>
 

@@ -1,4 +1,4 @@
-# Actioneer Deep Research — Institutional Stock Intelligence Prototype
+﻿# Actioneer Deep Research  -  Institutional Stock Intelligence Prototype
 
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.7-blue.svg)](https://www.typescriptlang.org/)
 [![React](https://img.shields.io/badge/React-18.3-61dafb.svg)](https://react.dev/)
@@ -18,7 +18,7 @@
 | **User asks a stock/investing question** | Natural language research bar supporting any query (e.g. *"Can NVIDIA sustain 70%+ gross margins?"*) + 4 instant 1-click benchmark presets (`NVDA`, `PLTR`, `ASML`, `AAPL`). |
 | **Agent runs deep-research to fetch detailed stock thesis** | Multi-phase autonomous pipeline: (1) Intent Decomposition, (2) Parallel Retrieval (SEC 10-Q, Street models, transcripts), (3) Semantic Distillation, and (4) Institutional Thesis Synthesis. |
 | **Readability of final output (Banker Aesthetics)** | Pristine Wall Street research note layout: Executive Verdict, 3 Core Thesis Pillars with quantified proof points, Financial Scorecard table, Scenario Matrix (Bull/Base/Bear), Catalyst Timeline, and Risk Ledger. Styled in high-readability serif/tabular typography on warm alabaster/white. |
-| **Token-efficient final response** | 4-tier Progressive Distillation pipeline reducing context by **79.4%–81.9%** (from ~78k raw tokens down to ~14k working tokens), delivering **4.3 verified facts per 100 output tokens** and cutting query cost from \$0.41 to \$0.07. |
+| **Token-efficient final response** | 4-tier Progressive Distillation pipeline reducing context by **79.4%-81.9%** (from ~78k raw tokens down to ~14k working tokens), delivering **4.3 verified facts per 100 output tokens** and cutting query cost from \$0.41 to \$0.07. |
 | **Store all agent transcripts in one location** | Every run writes deterministic audit files to `transcripts/` (`.json` and human-readable `.md`), viewable in the filesystem and via the in-app **Transcript Audit Drawer**. |
 
 ---
@@ -56,13 +56,13 @@ The production server serves both the compiled React frontend and the Express RE
 
 Comprehensive technical and design specifications are located in the [`docs/`](./docs) directory:
 
-1. [**`docs/PRD.md`**](./docs/PRD.md) — Product Requirements Document: User personas, functional requirements, success metrics, and BLUF requirements.
-2. [**`docs/SYSTEM_ARCHITECTURE.md`**](./docs/SYSTEM_ARCHITECTURE.md) — System Architecture & Technical Design: Layer breakdown, agent state machine, data schemas, and transcript audit storage.
-3. [**`docs/TOKEN_EFFICIENCY_SPEC.md`**](./docs/TOKEN_EFFICIENCY_SPEC.md) — Token Optimization Specification: Distillation mechanics, token waterfall analysis, and comparative benchmarks ($0.07 vs $0.41).
-4. [**`docs/BANKER_AESTHETICS_DESIGN_SYSTEM.md`**](./docs/BANKER_AESTHETICS_DESIGN_SYSTEM.md) — Design System Guide: Color tokens, typography hierarchy (Newsreader/Merriweather + tabular lining numerals), and tear-sheet layout.
-5. [**`docs/EVALUATION_AND_BENCHMARK.md`**](./docs/EVALUATION_AND_BENCHMARK.md) — Evaluation Plan: Automated scoring rubrics and 4 market archetype test cases.
-6. [**`docs/DEPLOYMENT_GUIDE.md`**](./docs/DEPLOYMENT_GUIDE.md) — Deployment Guide: Vercel, Railway, Render, Docker, and environment configuration.
-7. [**`ASSESSMENT_COMPLETION_REPORT.md`**](./ASSESSMENT_COMPLETION_REPORT.md) — Executive Assessment Delivery Summary for Actioneer Founders.
+1. [**`docs/PRD.md`**](./docs/PRD.md)  -  Product Requirements Document: User personas, functional requirements, success metrics, and BLUF requirements.
+2. [**`docs/SYSTEM_ARCHITECTURE.md`**](./docs/SYSTEM_ARCHITECTURE.md)  -  System Architecture & Technical Design: Layer breakdown, agent state machine, data schemas, and transcript audit storage.
+3. [**`docs/TOKEN_EFFICIENCY_SPEC.md`**](./docs/TOKEN_EFFICIENCY_SPEC.md)  -  Token Optimization Specification: Distillation mechanics, token waterfall analysis, and comparative benchmarks ($0.07 vs $0.41).
+4. [**`docs/BANKER_AESTHETICS_DESIGN_SYSTEM.md`**](./docs/BANKER_AESTHETICS_DESIGN_SYSTEM.md)  -  Design System Guide: Color tokens, typography hierarchy (Newsreader/Merriweather + tabular lining numerals), and tear-sheet layout.
+5. [**`docs/EVALUATION_AND_BENCHMARK.md`**](./docs/EVALUATION_AND_BENCHMARK.md)  -  Evaluation Plan: Automated scoring rubrics and 4 market archetype test cases.
+6. [**`docs/DEPLOYMENT_GUIDE.md`**](./docs/DEPLOYMENT_GUIDE.md)  -  Deployment Guide: Vercel, Railway, Render, Docker, and environment configuration.
+7. [**`ASSESSMENT_COMPLETION_REPORT.md`**](./ASSESSMENT_COMPLETION_REPORT.md)  -  Executive Assessment Delivery Summary for Actioneer Founders.
 
 ---
 
@@ -134,4 +134,5 @@ Expected output:
 - **Agent Orchestrator:** Multi-stage agent state machine with intent decomposition, parallel retrieval simulation, AST/regex boilerplate stripping, and schema extraction.
 - **Design System:** Wall Street institutional light mode (Midnight Navy `#0F172A`, Pure White `#FFFFFF`, Forest Emerald `#059669`, Crimson Ruby `#DC2626`, Tabular Monospace `#334155`).
 - **Packaging:** Dockerfile, single-command npm dev runner, Vite production bundler.
+
 

@@ -1,4 +1,4 @@
-# Actioneer Engineering Assessment — Completion & Executive Report
+﻿# Actioneer Engineering Assessment  -  Completion & Executive Report
 
 **Candidate:** Experienced Software Engineer Applicant  
 **Position:** Software Engineer at Actioneer  
@@ -14,7 +14,7 @@ In response to the prompt:
 
 I have engineered an end-to-end, production-grade deep research prototype called **Actioneer Stock Intelligence (Apex Research)**. Rather than creating a generic chat wrapper or an unformatted text scraper, this prototype was built from **first principles** with an obsessive focus on:
 1. **Banker-Grade Readability:** Clean, light Wall Street equity research layout (modeled after Goldman Sachs Global Investment Research and Morgan Stanley tear-sheets), featuring executive verdict banners, 3 structural thesis pillars, financial scorecard tables, scenario sensitivity matrices, and catalyst schedules.
-2. **Radical Token Efficiency:** A 4-tier progressive distillation architecture that reduces context tokens by **79.4%–81.9%**, delivering **4.3 validated facts per 100 output tokens** and cutting query cost from \$0.41 down to \$0.07.
+2. **Radical Token Efficiency:** A 4-tier progressive distillation architecture that reduces context tokens by **79.4%-81.9%**, delivering **4.3 validated facts per 100 output tokens** and cutting query cost from \$0.41 down to \$0.07.
 3. **Deterministic Transcript Auditability:** An automated trace logger writing structured `.json` and human-readable `.md` transcripts into a single dedicated directory (`transcripts/`), paired with an interactive in-app audit drawer.
 4. **Production Architecture & Documentation:** 6 comprehensive engineering and product specifications in `docs/` covering PRD, System Architecture, Token Efficiency, Banker Design System, Benchmark Plan, and Deployment.
 
@@ -38,7 +38,7 @@ I have engineered an end-to-end, production-grade deep research prototype called
 1. **"Cheaply querying enterprise data & complex documents":**
    Instead of brute-force context stuffing, our distillation engine extracts typed tabular tuples from multi-thousand-page filings, minimizing expensive LLM token consumption by ~80%.
 2. **"Bias for action; Able to quickly ship a v1 and iterate":**
-   Built an entire full-stack system—React frontend, Express API, seed engine, automated verification suite, and 6 architecture docs—delivering a working product in a single cohesive development cycle.
+   Built an entire full-stack system - React frontend, Express API, seed engine, automated verification suite, and 6 architecture docs - delivering a working product in a single cohesive development cycle.
 3. **"OCD about personal productivity and AI-agent setup":**
    Engineered with full TypeScript type-safety, modular component boundaries, automated testing (`npm test`), deterministic seeding (`npm run seed`), and Docker containerization.
 4. **"Strong bias for measuring and improving system performance":**
@@ -82,4 +82,5 @@ npm test
 npm run dev
 ```
 Open **`http://localhost:5173`** to test the prototype interactively.
+
 

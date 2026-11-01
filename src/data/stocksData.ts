@@ -13,35 +13,35 @@ export const BENCHMARK_MEMOS: Record<string, InvestmentThesisMemo> = {
     impliedUpsidePercent: 26.6,
     conviction: "HIGH",
     primaryQuestion: "Can NVIDIA sustain 70%+ gross margins through 2027 given custom ASIC competition from AWS and Google?",
-    executiveSummary: "We maintain our OVERWEIGHT rating on NVIDIA with a revised 12-month target price of $175 (26.6% upside), underpinned by the accelerating commercial rollout of the Blackwell (B200/GB200) platform and broadening enterprise sovereign demand. Despite increasing market commentary regarding in-house custom ASIC displacement (AWS Trainium, Google TPU v6), NVIDIA's full-stack computing moat—spanning CUDA-X libraries, NVLink 5 switches, and Spectrum-X Ethernet networking—continues to enforce formidable total-cost-of-ownership (TCO) superiority for generative frontier models.\n\nWhile hyperscaler capex growth is expected to moderate from triple-digit rates to ~28-35% YoY in FY26/27, NVIDIA's gross margins are forecast to stabilize in the 73.5%-75.0% band rather than collapsing to consensus bear estimates of <65%. Enterprise adoption of proprietary AI agents and sovereign AI cluster deployments across Europe and APAC represent underappreciated demand buffers that insulate gross margin profiles against CSP bargaining power.",
+    executiveSummary: "We keep an OVERWEIGHT rating on NVIDIA with a 12-month target price of $175 (26.6% upside). Blackwell B200 and GB200 volume shipments are starting, and sovereign cluster orders are broadening. Hyperscalers continue to design internal chips like AWS Trainium and Google TPU v6, but NVIDIA retains an advantage in total cost of ownership through its software libraries, NVLink 5 switches, and Spectrum-X networking.\n\nHyperscaler capital expenditure growth will likely moderate from triple-digit rates to roughly 28% to 35% in fiscal 2026 and 2027. We project NVIDIA gross margins to settle between 73.5% and 75.0%, well above consensus bear cases of sub-65%. Enterprise adoption of private AI clusters across Europe and Asia gives NVIDIA an additional demand cushion against cloud provider bargaining power.",
     thesisPillars: [
       {
-        title: "Blackwell Architecture Supercycle & CoWoS-L De-Bottlenecking",
-        statement: "Blackwell GB200 NVL72 rack-scale systems deliver a 30x inference throughput expansion and 4x training efficiency vs H100, locking in multi-quarter lead times through late 2026.",
+        title: "Blackwell Architecture Ramp and Packaging Supply",
+        statement: "Blackwell GB200 NVL72 rack systems expand inference throughput 30 times and training efficiency 4 times compared to H100, extending delivery commitments through late 2026.",
         proofPoints: [
-          "TSMC CoWoS advanced packaging capacity allocation expanded to >45k wafers/month for NVIDIA, mitigating 2025 supply bottlenecks.",
-          "Hyperscaler committed order book for GB200 exceeds 1.2M units across Microsoft, Meta, AWS, and Google Cloud.",
-          "ASP per GB200 NVL72 system modeled at $2.8M-$3.1M with accretive gross margin contribution above 74%."
+          "TSMC expanded advanced packaging capacity for NVIDIA to more than 45,000 wafers per month, resolving earlier wafer bottlenecks.",
+          "Hyperscaler orders for GB200 systems exceed 1.2 million units across Microsoft, Meta, AWS, and Google Cloud.",
+          "Average selling prices for GB200 NVL72 systems stand between $2.8M and $3.1M with gross margin above 74%."
         ],
         sentiment: "bullish"
       },
       {
-        title: "Full-Stack Network & Systems Moat (Spectrum-X & NVLink)",
-        statement: "NVIDIA is transforming from a pure-play GPU vendor into a mission-critical data center systems architect, capturing $1.20-$1.35 in networking/switching spend for every $1.00 spent on accelerated compute.",
+        title: "Systems and Networking Integration (Spectrum-X and NVLink)",
+        statement: "NVIDIA sells integrated data center systems, generating $1.20 to $1.35 in networking equipment for each dollar of accelerator compute sold.",
         proofPoints: [
-          "Networking revenue surpassed a $14B annualized run rate, propelled by Spectrum-X Ethernet deployments in standard enterprise clouds.",
-          "NVLink 5 interconnect bandwidth of 1.8 TB/s per GPU cannot be replicated by merchant PCIe or commodity Ethernet fabrics.",
-          "Software ecosystem (CUDA 13, NIM microservices, TensorRT-LLM) retains a 10-year developer switching cost advantage."
+          "Annual networking revenue exceeded $14B, driven by Spectrum-X Ethernet installations in corporate cloud environments.",
+          "NVLink 5 interconnect bandwidth reaches 1.8 TB/s per GPU, exceeding merchant PCIe and standard Ethernet links.",
+          "CUDA 13, NIM microservices, and TensorRT-LLM software tools retain a multi-year developer switching advantage."
         ],
         sentiment: "bullish"
       },
       {
-        title: "ASIC Co-Existence Reality & Sovereign Demand Buffer",
-        statement: "Custom silicon serves specialized internal hyperscaler workloads (e.g. YouTube recommendation, search embeddings), whereas frontier multi-modal training and dynamic agentic inference overwhelmingly standardize on NVIDIA.",
+        title: "Custom Silicon Limits and Sovereign AI Demand",
+        statement: "Internal cloud provider chips handle targeted internal workloads such as search embeddings, while complex model training and inference run on NVIDIA hardware.",
         proofPoints: [
-          "Hyperscaler in-house ASICs remain yield-constrained and software-fragmented, failing to address third-party enterprise tenant demand.",
-          "Sovereign AI initiatives (Middle East, Japan, France, UK) contributed over $10B in pipeline commitments, non-reliant on US hyperscalers.",
-          "Gross margin floor modeled at 72.8% in FY27 under our stressed bear sensitivity case, well above the 62% historical trough."
+          "Cloud provider in-house silicon faces manufacturing yield limits and software fragmentation for external enterprise clients.",
+          "Sovereign government projects in the Middle East, Japan, France, and the UK committed over $10B in cluster purchases.",
+          "Our conservative scenario models a gross margin floor of 72.8% in fiscal 2027, above historical cyclical lows."
         ],
         sentiment: "bullish"
       }
@@ -61,35 +61,35 @@ export const BENCHMARK_MEMOS: Record<string, InvestmentThesisMemo> = {
       bull: {
         targetPrice: 210.00,
         probability: 25,
-        rationale: "Blackwell gross margins exceed 76%; enterprise sovereign demand accelerates to $25B+; CSP capex expands >40% YoY in 2026/27."
+        rationale: "Blackwell gross margins exceed 76%; sovereign AI purchases top $25B; cloud provider capital expenditure grows over 40% year over year."
       },
       base: {
         targetPrice: 175.00,
         probability: 55,
-        rationale: "Orderly GB200 ramp; FY26 revenue reaches $148B; gross margins settle at ~74.2%; forward P/E multiple sustains 32x."
+        rationale: "Steady GB200 deliveries; fiscal 2026 revenue reaches $148B; gross margins stay near 74.2%; forward P/E holds at 32x."
       },
       bear: {
         targetPrice: 95.00,
         probability: 20,
-        rationale: "Hyperscalers digest capex (-15% YoY); custom ASICs displace 25% of inference workloads; gross margin drops to 66%."
+        rationale: "Cloud capex falls 15%; internal cloud chips absorb 25% of inference tasks; gross margin drops to 66%."
       }
     },
     catalystTimeline: [
       {
         horizon: "0-3 Months",
-        event: "Q4 FY25 Earnings & Blackwell Volume Shipment Guidance",
+        event: "Q4 FY25 Earnings and Initial Blackwell Volume Shipment Data",
         expectedImpact: "High",
         bias: "Positive"
       },
       {
         horizon: "3-6 Months",
-        event: "GTC 2026 Keynote: Next-Gen 'Rubin' Architecture & Optical Interconnect Roadmaps",
+        event: "GTC Conference: Next-Generation Rubin Architecture and Optical Roadmaps",
         expectedImpact: "High",
         bias: "Positive"
       },
       {
         horizon: "6-12 Months",
-        event: "Hyperscaler FY26 Capex Cycle Audit & Enterprise Sovereign Cluster Delivery",
+        event: "Fiscal 2026 Hyperscaler Capital Expenditure Revisions",
         expectedImpact: "Medium",
         bias: "Volatile"
       }
@@ -97,21 +97,21 @@ export const BENCHMARK_MEMOS: Record<string, InvestmentThesisMemo> = {
     riskMatrix: [
       {
         category: "Customer Concentration",
-        risk: "Top 4 CSP hyperscalers account for ~41% of total data center revenues.",
+        risk: "The four largest cloud providers account for roughly 41% of data center revenue.",
         severity: "High",
-        mitigant: "Rapid diversification into sovereign nations, enterprise tier-2 neoclouds (CoreWeave, Lambda), and Fortune 500 private clouds."
+        mitigant: "Sales growth into sovereign governments, specialized GPU clouds, and direct corporate accounts."
       },
       {
-        category: "Geopolitical & Export",
-        risk: "Escalation in US Department of Commerce restrictions on Middle East / APAC compute clusters.",
+        category: "Export Controls",
+        risk: "Trade restrictions on advanced computing hardware delivered to specific regional hubs.",
         severity: "Medium",
-        mitigant: "Strict compliance SKU architectures (H20/B20 tailored variants) and local regulatory alignment."
+        mitigant: "Compliant regional hardware configurations and formal licensing processes."
       },
       {
-        category: "Infrastructure Constraints",
-        risk: "Data center power availability and grid interconnect queues delaying greenfield mega-cluster deployments.",
+        category: "Power and Facilities",
+        risk: "Electric grid interconnection backlogs delaying new data center construction.",
         severity: "Medium",
-        mitigant: "Efficiency gains in GB200 NVL72 liquid cooling (25x lower power consumption per token generated vs air-cooled clusters)."
+        mitigant: "Liquid cooling efficiency in GB200 NVL72 racks reduces electrical draw per token generated."
       }
     ],
     tokenEfficiencyMetrics: {
@@ -130,17 +130,17 @@ export const BENCHMARK_MEMOS: Record<string, InvestmentThesisMemo> = {
         title: "SEC Form 10-Q (Q3 FY25 Ended October 2025)",
         source: "NVIDIA Investor Relations",
         url: "https://ir.nvidia.com",
-        relevance: "Data Center segment revenue breakdown, gross margin metrics, and wafer supply commitments."
+        relevance: "Data Center segment revenue, gross margins, and wafer supply commitments."
       },
       {
-        title: "Goldman Sachs Global Investment Research: Semi & AI Infrastructure",
-        source: "Goldman Sachs Equity Research",
-        relevance: "TSMC CoWoS capacity allocation models and hyperscaler custom silicon ROI comparison."
+        title: "Global Investment Research: Semiconductor Infrastructure",
+        source: "Goldman Sachs GIR",
+        relevance: "TSMC packaging allocation estimates and custom silicon cost comparisons."
       },
       {
-        title: "Morgan Stanley Technology Conference: Blackwell Architecture Teardown",
-        source: "Morgan Stanley GIR",
-        relevance: "Rack-scale NVLink interconnect pricing and Spectrum-X Ethernet penetration rates."
+        title: "Technology Conference: Blackwell Rack Architecture Review",
+        source: "Morgan Stanley Research",
+        relevance: "NVLink rack pricing models and Spectrum-X Ethernet adoption numbers."
       }
     ]
   },
@@ -156,35 +156,35 @@ export const BENCHMARK_MEMOS: Record<string, InvestmentThesisMemo> = {
     impliedUpsidePercent: 18.6,
     conviction: "MEDIUM",
     primaryQuestion: "Analyze Palantir's commercial AIP enterprise customer acceleration vs US government defense concentration and multiple expansion.",
-    executiveSummary: "We initiate with an EQUAL-WEIGHT rating on Palantir Technologies with a price target of $74 (18.6% upside). Palantir's Artificial Intelligence Platform (AIP) represents one of the most effective enterprise monetization engines in the software sector, converting 5-day bootcamp pilots into 7-figure production contracts and driving US Commercial revenue growth to +54% YoY.\n\nHowever, at an unprecedented valuation multiple exceeding 85x NTM P/E and ~38x EV/Sales, Palantir's current share price leaves near-zero margin for execution variance. While the company's defense prime status (TITAN program, Project Maven) ensures high-margin government durability, maintaining the current valuation multiple requires commercial revenue acceleration to sustain >45% for the next 3 consecutive fiscal years.",
+    executiveSummary: "We rate Palantir EQUAL-WEIGHT with a target price of $74 (18.6% upside). Palantir's Artificial Intelligence Platform (AIP) converts 5-day bootcamp pilots into recurring enterprise software deals, helping drive US Commercial revenue growth to 54% year over year.\n\nPalantir trades above 85x forward earnings and 38x sales, leaving little buffer for slower quarters. While prime contractor defense awards (such as the TITAN vehicle program and Project Maven) provide reliable high-margin government backlog, sustaining the current valuation requires commercial growth to remain above 45% over the next three years.",
     thesisPillars: [
       {
-        title: "AIP Bootcamps Delivering Unprecedented Sales Velocity",
-        statement: "Palantir's shift from 9-month bespoke deployments to 5-day hands-on AIP bootcamps has collapsed customer acquisition cycles and unlocked mid-market enterprise adoption.",
+        title: "AIP Bootcamps Speed Up Enterprise Sales Cycles",
+        statement: "Palantir shortened customer onboarding from 9-month implementations to 5-day hands-on bootcamps, broadening its enterprise customer base.",
         proofPoints: [
-          "US Commercial customer count expanded 83% YoY, surpassing 380 enterprise clients.",
-          "AIP contract closures frequently materialize within 4-6 weeks post-bootcamp vs 6-12 months for legacy Foundry.",
-          "Net Dollar Retention in US Commercial exceeded 132%, evidencing deep expansion within existing accounts."
+          "US commercial customer count grew 83% year over year, reaching 380 corporate accounts.",
+          "Contracts routinely close within 4 to 6 weeks following bootcamps, down from 6 to 12 months for legacy Foundry.",
+          "US commercial net dollar retention reached 132%, demonstrating expansion inside established clients."
         ],
         sentiment: "bullish"
       },
       {
-        title: "Prime Contractor Moat in Department of Defense Workloads",
-        statement: "Palantir has successfully transitioned from an experimental software subcontractor to a Tier-1 prime defense contractor with multi-hundred million dollar programmatic awards.",
+        title: "Prime Contractor Role in Defense Computing",
+        statement: "Palantir moved from experimental software supplier to prime defense contractor with major multi-year military awards.",
         proofPoints: [
-          "US Army $480M contract award for Maven Smart System prototype production.",
-          "Prime contractor selection for the Army's Tactical Intelligence Targeting Access Node (TITAN) vehicle program.",
-          "Government gross margins remain industry-leading at 83% with 98%+ renewal rates."
+          "US Army awarded a $480M contract for Maven Smart System production.",
+          "Selected as prime contractor for the Army's TITAN mobile intelligence ground station.",
+          "Government gross margins stand at 83% with contract renewal rates above 98%."
         ],
         sentiment: "bullish"
       },
       {
-        title: "Valuation Multiple Asymmetry Caps Risk-Adjusted Skew",
-        statement: "At 88x forward earnings, PLTR trades at a 350% premium to large-cap software peers, embedding hyper-optimistic enterprise TAM capture assumptions.",
+        title: "High Valuation Multiple Limits Risk-Adjusted Upside",
+        statement: "At 88x forward earnings, the stock trades at a large premium to enterprise software peers, pricing in rapid market share gains.",
         proofPoints: [
-          "S&P 500 inclusion and retail momentum have decoupled valuation from historical cash flow discount benchmarks.",
-          "International commercial growth remains sluggish at +12% YoY, highlighting European data governance friction.",
-          "Operating margin expansion must cross 45% (GAAP) to justify current discounted cash flow multiples."
+          "Index inclusion and retail fund flows pushed valuation above historical cash flow benchmarks.",
+          "International commercial growth ran at 12% year over year due to European procurement delays.",
+          "GAAP operating margins need to reach 45% to validate current discounted cash flow assumptions."
         ],
         sentiment: "cautious"
       }
@@ -204,57 +204,57 @@ export const BENCHMARK_MEMOS: Record<string, InvestmentThesisMemo> = {
       bull: {
         targetPrice: 92.00,
         probability: 20,
-        rationale: "US commercial hyper-growth (>60% YoY) broadens into Europe and Japan; AIP becomes the dominant enterprise ontology layer."
+        rationale: "US commercial growth sustains above 60% and expands into Europe; AIP becomes an industry standard for data pipelines."
       },
       base: {
         targetPrice: 74.00,
         probability: 50,
-        rationale: "Commercial growth sustains 40-45%; defense contracts renew steadily; valuation multiple gradually compresses into earnings growth."
+        rationale: "Commercial growth stabilizes between 40% and 45%; military contracts renew steadily; valuation multiple gradually aligns with earnings."
       },
       bear: {
         targetPrice: 38.00,
         probability: 30,
-        rationale: "Multiple derating toward high-growth peer average (40x P/E); US commercial growth decelerates under enterprise IT budget belt-tightening."
+        rationale: "Valuation re-rates toward the software peer median of 40x P/E; enterprise software budgets tighten."
       }
     },
     catalystTimeline: [
       {
         horizon: "0-3 Months",
-        event: "AIPCon Developer Conference: Enterprise Agentic Case Studies",
+        event: "AIPCon: Customer Deployment Case Studies and Product Releases",
         expectedImpact: "Medium",
         bias: "Positive"
       },
       {
         horizon: "3-6 Months",
-        event: "Department of Defense FY26 Budget Appropriations for Joint All-Domain Command (JADC2)",
+        event: "Department of Defense FY26 Joint Command Allocations",
         expectedImpact: "High",
         bias: "Positive"
       },
       {
         horizon: "6-12 Months",
-        event: "Annual Rule of 40 Audit & GAAP Operating Margin Inflection Point",
+        event: "Annual Rule of 40 Update and Full-Year Operating Cash Flow Results",
         expectedImpact: "High",
         bias: "Volatile"
       }
     ],
     riskMatrix: [
       {
-        category: "Valuation Risk",
-        risk: "Severe downside vulnerability if quarterly revenue fails to beat street consensus by at least 3-5%.",
+        category: "Valuation Sensitivity",
+        risk: "Share price declines if quarterly revenue beats consensus expectations by less than 3%.",
         severity: "High",
-        mitigant: "Strong share repurchase capacity supported by $4.0B in zero-debt net cash reserves."
+        mitigant: "Zero debt and $4.0B in liquid cash reserves support share repurchases."
       },
       {
-        category: "Sales Force Scaling",
-        risk: "Risk of channel capacity saturation as bootcamp demand outpaces certified deployment engineers.",
+        category: "Field Engineering Capacity",
+        risk: "Customer demand for bootcamps outpaces the hiring rate of qualified deployment engineers.",
         severity: "Medium",
-        mitigant: "Expanding systems integrator partnerships with Accenture, PwC, and Oracle Cloud."
+        mitigant: "Partnerships with systems integrators including Accenture and Oracle Cloud."
       },
       {
-        category: "Political / Contracting",
-        risk: "Defense budget reallocation or delays in federal continuing resolutions.",
+        category: "Federal Procurement",
+        risk: "Delays in federal budget approvals or changes in military priorities.",
         severity: "Medium",
-        mitigant: "Diversified contract vehicle portfolio spanning Army, Navy, Air Force, and intelligence agencies."
+        mitigant: "Diversified contract commitments across the Army, Navy, Air Force, and intelligence agencies."
       }
     ],
     tokenEfficiencyMetrics: {
@@ -273,17 +273,17 @@ export const BENCHMARK_MEMOS: Record<string, InvestmentThesisMemo> = {
         title: "SEC Form 10-Q (Q3 2025)",
         source: "Palantir Investor Relations",
         url: "https://investors.palantir.com",
-        relevance: "Commercial vs Government customer count segmentation and Rule of 40 calculation."
+        relevance: "Commercial versus government customer segmentation and Rule of 40 metrics."
       },
       {
-        title: "Department of Defense Contract Award Notice (Maven Prime)",
+        title: "Department of Defense Contract Notice (Maven Prime)",
         source: "US DoD Office of Public Affairs",
-        relevance: "Contract scope, ceiling valuation ($480M), and programmatic deployment timeline."
+        relevance: "Award details, ceiling value of $480M, and program timeline."
       },
       {
-        title: "JPMorgan Software Equity Research Note: Enterprise AI Bootcamps",
+        title: "Software Equity Research Note: AI Deployment Models",
         source: "JPMorgan Equity Research",
-        relevance: "Bootcamp conversion velocity and forward multiple sensitivity analysis."
+        relevance: "Bootcamp conversion data and valuation sensitivity models."
       }
     ]
   },
@@ -299,35 +299,35 @@ export const BENCHMARK_MEMOS: Record<string, InvestmentThesisMemo> = {
     impliedUpsidePercent: 25.5,
     conviction: "HIGH",
     primaryQuestion: "Evaluate ASML's High-NA EUV lithography monopoly against escalating China export controls and cyclic foundry capex slowdowns.",
-    executiveSummary: "We reiterate our OVERWEIGHT rating on ASML Holding with a 12-month target price of $935 (€860), representing a 25.5% upside. Following the post-Q3 cyclical order reset, we believe market pessimism regarding foundry capex digestion and Dutch export restrictions is now fully discounted in the shares.\n\nASML maintains an unbreakable monopoly over High-NA EUV (0.55 NA) systems—the foundational manufacturing equipment required for all sub-2nm leading-edge logic (TSMC N2/A16, Intel 14A, Samsung SF2) and advanced 3D DRAM nodes. As China revenue normalizes from unsustainable highs (40%+) back to historical baselines (20%), the inflection toward next-generation AI chip architectures in 2026/27 will catalyze a major order re-acceleration.",
+    executiveSummary: "We reiterate our OVERWEIGHT rating on ASML Holding with a 12-month target price of $935 (€860), implying 25.5% upside. Following cyclical order revisions, market expectations for foundry capex and Dutch export restrictions are factored into the share price.\n\nASML is the sole global producer of High-NA EUV systems (0.55 NA), the equipment required to print sub-2nm logic nodes (such as TSMC N2 and Intel 14A) and future 3D DRAM memory. While sales to Chinese foundries are normalizing from 40% of revenue to a baseline near 20%, demand for leading-edge AI chip manufacturing tools supports a multi-year order recovery starting in late 2025.",
     thesisPillars: [
       {
-        title: "High-NA EUV (EXE:5000/5200) Structural Monopoly",
-        statement: "High-NA EUV lithography systems priced at €350M+ per unit represent the single most indispensable capital asset in semiconductor manufacturing.",
+        title: "Sole Supplier of High-NA EUV Lithography",
+        statement: "High-NA EUV tools, priced at roughly €350M each, remain mandatory for commercial production below 2 nanometers.",
         proofPoints: [
-          "Zero commercial competitor exists in extreme ultraviolet (0.33 NA or 0.55 NA) lithography globally.",
-          "First customer tool validations at Intel Fab 34 and TSMC R&D show 1.7x feature density enhancement and single-exposure defect reduction.",
-          "High-NA backlog of >25 units provides guaranteed revenue visibility through 2027/28."
+          "No commercial competitor produces extreme ultraviolet lithography systems.",
+          "Early installations at Intel Fab 34 and TSMC R&D show 1.7x pattern density gains and reduced multi-patterning steps.",
+          "Backlog contains over 25 High-NA systems, offering production visibility through 2028."
         ],
         sentiment: "bullish"
       },
       {
-        title: "Leading-Edge Logic & 3D DRAM Capex Re-Acceleration",
-        statement: "Foundry spending on advanced nodes will rebound sharply as TSMC Fab 20/21 ramps 2nm volume and memory makers transition to 1-gamma/1-delta DRAM.",
+        title: "Leading-Edge Logic and Advanced DRAM Capex",
+        statement: "Tool purchases will rise as foundries equip high-volume fabs for 2nm production and memory manufacturers deploy 1-gamma DRAM.",
         proofPoints: [
-          "EUV layer count increases from 12-14 layers at 3nm to >20 layers at 2nm/sub-2nm nodes.",
-          "TSMC N2 node customer commitment pipeline (Apple, NVIDIA, AMD) is larger than N3 at the equivalent development stage.",
-          "Installed Base Management (service and field upgrades) delivers steady high-margin recurring cash flows (€6B+ annually)."
+          "EUV layer counts rise from 12 to 14 at 3nm to more than 20 at 2nm nodes.",
+          "TSMC N2 node customer pipeline exceeds commitments recorded for N3 at the same phase.",
+          "Installed base maintenance and software upgrades provide stable recurring revenue above €6B annually."
         ],
         sentiment: "bullish"
       },
       {
-        title: "China Export Derisking Already Reflected in Valuation",
-        statement: "Market concerns over Dutch and US restrictions on NXT:1970i/1980i DUV systems have reset expectations; remaining China demand consists of non-sanctioned mature nodes.",
+        title: "Export Restrictions Priced Into Valuation",
+        statement: "Concerns over Dutch and US trade limits on immersion DUV tools have reset expectations, leaving remaining China demand focused on mature nodes.",
         proofPoints: [
-          "China share of net bookings guided down to ~20% for FY25/26, eliminating negative revision risk.",
-          "Western domestic foundry incentives (US CHIPS Act, EU Chips Act) subsidize new leading-edge fabs requiring fresh EUV tooling.",
-          "Historical downcycle troughs consistently represent prime entry multiples (current forward P/E of 28x vs 5-year average of 34x)."
+          "China share of order intake is modeled at roughly 20% for fiscal 2026, lowering further downgrade risk.",
+          "Government semiconductor subsidies in the US, Europe, and Japan require new lithography machines.",
+          "The stock trades at 28x forward earnings, below its five-year average of 34x."
         ],
         sentiment: "bullish"
       }
@@ -347,57 +347,57 @@ export const BENCHMARK_MEMOS: Record<string, InvestmentThesisMemo> = {
       bull: {
         targetPrice: 1050.00,
         probability: 25,
-        rationale: "High-NA adoption accelerates across all tier-1 foundries; 2026 revenue achieves high-end of guidance (€35B+); multiple expands to 35x P/E."
+        rationale: "High-NA tool adoption accelerates across tier-1 foundries; 2026 revenue tops €35B; valuation multiple reaches 35x P/E."
       },
       base: {
         targetPrice: 935.00,
         probability: 60,
-        rationale: "Cyclical recovery takes hold by 2H25; €30B-€32B revenue in FY26 with 54% gross margin; steady 30x multiple."
+        rationale: "Tool orders recover by late 2025; annual revenue reaches €31B with 54% gross margin; multiple holds at 30x."
       },
       bear: {
         targetPrice: 520.00,
         probability: 15,
-        rationale: "Prolonged foundry capex freeze; total unilateral Dutch export embargo on servicing China DUV fleet; earnings drop 20%."
+        rationale: "Foundry tool deliveries face delays; Dutch authorities restrict maintenance on installed China systems; earnings decline 20%."
       }
     },
     catalystTimeline: [
       {
         horizon: "0-3 Months",
-        event: "TSMC 2nm Fab 20 Tool Installation Milestones & Q1 Bookings Report",
+        event: "TSMC Fab 20 Cleanroom Readiness and Initial Q1 Tool Deliveries",
         expectedImpact: "High",
         bias: "Positive"
       },
       {
         horizon: "3-6 Months",
-        event: "High-NA EXE:5200 Production System Commercial Delivery to Tier-1 Customers",
+        event: "High-NA EXE:5200 Commercial Production Validation with Tier-1 Customers",
         expectedImpact: "High",
         bias: "Positive"
       },
       {
         horizon: "6-12 Months",
-        event: "ASML Investor Day: 2030 Long-Term Roadmap & Installed Base Expansion Target",
+        event: "Investor Day: Updated 2030 Revenue Guidance and Service Expansion",
         expectedImpact: "High",
         bias: "Positive"
       }
     ],
     riskMatrix: [
       {
-        category: "Export Control Expansion",
-        risk: "Potential retrospective prohibition on servicing previously installed deep-ultraviolet (DUV) equipment in China.",
+        category: "Trade Controls",
+        risk: "Potential restrictions on servicing deep-ultraviolet machines previously sold in China.",
         severity: "High",
-        mitigant: "High demand from expanding US, European, and Japanese domestic fab projects offsetting geographic reallocation."
+        mitigant: "Tool shipments to new fabs in the US, Europe, and Japan offset shifts in geographic demand."
       },
       {
-        category: "Foundry Capex Delays",
-        risk: "Customer financial distress (e.g. Intel foundry restructuring) delaying tool purchase order deliveries.",
+        category: "Foundry Spending Cycles",
+        risk: "Customer capital budget adjustments could postpone equipment delivery dates.",
         severity: "Medium",
-        mitigant: "Strict slot reservation non-refundable deposits and multi-year supply agreements."
+        mitigant: "Non-refundable slot reservation deposits and multi-year procurement schedules."
       },
       {
-        category: "Supply Chain Complexity",
-        risk: "Single-source dependency on Zeiss optical mirrors and specialised laser components.",
+        category: "Component Sourcing",
+        risk: "Single-source supply relationships for specialized optical mirrors from Zeiss.",
         severity: "Medium",
-        mitigant: "Decades-long joint venture alignment, exclusive supply covenants, and co-investment in Zeiss fabrication facilities."
+        mitigant: "Long-term partnership agreements, exclusive manufacturing covenants, and co-investments in Zeiss facilities."
       }
     ],
     tokenEfficiencyMetrics: {
@@ -413,20 +413,20 @@ export const BENCHMARK_MEMOS: Record<string, InvestmentThesisMemo> = {
     },
     citations: [
       {
-        title: "ASML Q3 2025 Financial Results & Backlog Disclosures",
+        title: "Q3 2025 Financial Results and Backlog Summary",
         source: "ASML Investor Relations",
         url: "https://www.asml.com/investors",
-        relevance: "Net bookings breakdown, EUV vs DUV revenue split, and 2025/2026 guidance range."
+        relevance: "Net bookings data, EUV versus DUV revenue split, and forward revenue guidance."
       },
       {
-        title: "Bernstein European Technology: Lithography Deep Dive",
+        title: "European Technology Report: Lithography Economics",
         source: "Bernstein Research",
-        relevance: "High-NA EUV cost-per-die crossover calculation vs multiple-patterning 0.33 NA."
+        relevance: "Cost-per-die analysis comparing High-NA single exposure to multi-patterning tools."
       },
       {
-        title: "Dutch Ministry of Foreign Trade Regulatory Notice on Lithography Servicing",
+        title: "Dutch Foreign Trade Guidance on Industrial Tool Servicing",
         source: "Government of the Netherlands",
-        relevance: "Scope of national export restrictions and authorization requirements for DUV tools."
+        relevance: "Regulations governing technical support on industrial lithography tools."
       }
     ]
   },
@@ -442,35 +442,35 @@ export const BENCHMARK_MEMOS: Record<string, InvestmentThesisMemo> = {
     impliedUpsidePercent: 7.2,
     conviction: "MEDIUM",
     primaryQuestion: "Is Apple's Services gross margin and AI iPhone upgrade cycle sufficient to offset China market share loss and antitrust headwinds?",
-    executiveSummary: "We maintain our EQUAL-WEIGHT rating on Apple with a 12-month target price of $245 (7.2% upside). Apple continues to exhibit best-in-class free cash flow generation ($105B+ TTM) and exceptional capital return discipline. The Services division (surpassing a $100B run rate at a 74.5% gross margin) provides an extraordinary high-margin cash flow floor.\n\nHowever, we view the upcoming 'Apple Intelligence' multi-year upgrade cycle as already largely discounted in the stock's 30.5x NTM P/E multiple. Furthermore, structural market share losses in Greater China to domestic competitors (Huawei, Xiaomi) combined with escalating regulatory scrutiny (US DoJ antitrust lawsuit, EU Digital Markets Act) constrain multiple expansion potential.",
+    executiveSummary: "We maintain an EQUAL-WEIGHT rating on Apple with a 12-month target price of $245 (7.2% upside). Apple generates over $105B in annual free cash flow with dependable share buybacks. The Services division runs above $100B in annual revenue at a 74.5% gross margin, providing a solid earnings base.\n\nHowever, the multi-year Apple Intelligence upgrade cycle is largely reflected in the stock at 30.5x forward earnings. In addition, handset market share losses in China to domestic manufacturers and regulatory lawsuits (such as the US antitrust case and EU Digital Markets Act compliance) cap multiple expansion.",
     thesisPillars: [
       {
-        title: "Services Division As High-Margin Cash Machine",
-        statement: "Apple's active installed base of 2.2B+ devices fuels recurring, double-digit Services expansion at 2.5x the margin profile of hardware.",
+        title: "Services Division Generates High-Margin Cash Flow",
+        statement: "Apple's installed base of 2.2 billion active devices drives double-digit Services growth at more than twice the margin rate of hardware.",
         proofPoints: [
-          "Services revenue exceeded $25B in the most recent quarter with gross margin touching 74.5%.",
-          "Paid subscriptions across iCloud, Apple Music, and App Store surpassed 1.1B accounts.",
-          "Services now accounts for >36% of total company gross profit, dampening cyclical hardware volatility."
+          "Quarterly Services revenue topped $25B with a 74.5% gross margin.",
+          "Paid subscriptions across cloud services and media passed 1.1 billion accounts.",
+          "Services now accounts for more than 36% of Apple total gross profit, moderating hardware cycle swings."
         ],
         sentiment: "bullish"
       },
       {
-        title: "Apple Intelligence Catalyzing Measured Upgrade Cycle",
-        statement: "On-device private cloud compute and localized AI features will drive a replacement cycle, though staggered regional rollouts will lengthen the adoption curve.",
+        title: "Apple Intelligence Supports Measured Upgrade Cadence",
+        statement: "On-device processing and Siri updates will support hardware replacements, though regional language schedules will spread out consumer purchases.",
         proofPoints: [
-          "Only iPhone 15 Pro and iPhone 16+ models feature sufficient DRAM (8GB+) to run Apple Intelligence, creating a 350M+ upgrade eligible pool.",
-          "Carrier promotional subsidies remain elevated, reducing consumer barrier to upgrade.",
-          "However, delayed language availability in China and EU delays the upgrade peak into late 2026."
+          "Only iPhone 15 Pro and iPhone 16 models carry the 8GB of memory required for Apple Intelligence, creating a 350M+ upgrade-eligible base.",
+          "Carrier promotional discounts remain competitive across major markets.",
+          "Language releases in Chinese and European languages stretch the upgrade peak into late 2026."
         ],
         sentiment: "neutral"
       },
       {
-        title: "China Geopolitical Share Loss & Regulatory Frictional Costs",
-        statement: "Apple faces permanent market share displacement in China tier-1 cities alongside ongoing legal challenges to App Store take-rates.",
+        title: "China Competition and Antitrust Reviews",
+        statement: "Apple faces domestic hardware competition in China alongside legal scrutiny of App Store transaction fees.",
         proofPoints: [
-          "Greater China revenue contracted 4% YoY amidst intense competition from Huawei Mate/Pura series.",
-          "EU DMA compliance has necessitated alternative app marketplaces and reduced fee structures.",
-          "US Department of Justice antitrust litigation threatens Google search default distribution payments ($20B/year)."
+          "Greater China revenue declined 4% year over year as Huawei gained share in premium categories.",
+          "European Union rules require alternative app marketplaces and modified commission structures.",
+          "The US Department of Justice lawsuit challenges default search payment agreements that generate approximately $20B in annual operating profit."
         ],
         sentiment: "cautious"
       }
@@ -490,57 +490,57 @@ export const BENCHMARK_MEMOS: Record<string, InvestmentThesisMemo> = {
       bull: {
         targetPrice: 275.00,
         probability: 20,
-        rationale: "Apple Intelligence creates a supercycle matching iPhone 6/12; Services crosses $120B; China market stabilizes."
+        rationale: "Apple Intelligence drives an upgrade cycle on par with iPhone 12; Services revenue exceeds $120B; China handset share stabilizes."
       },
       base: {
         targetPrice: 245.00,
         probability: 60,
-        rationale: "Mid-single-digit iPhone revenue growth; Services maintains 11-13% growth; multiple sustains at ~30x P/E."
+        rationale: "Mid-single-digit iPhone revenue growth; Services expands 11% to 13%; forward valuation multiple holds near 30x."
       },
       bear: {
         targetPrice: 180.00,
         probability: 20,
-        rationale: "US DoJ strikes down Google search revenue sharing; China revenue drops 15%; valuation multiple compresses to 22x."
+        rationale: "Courts restrict default search payments; China revenue contracts 15%; valuation multiple re-rates to 22x."
       }
     },
     catalystTimeline: [
       {
         horizon: "0-3 Months",
-        event: "Q1 Holiday Quarter Earnings & iPhone 16 Global Channel Sell-Through",
+        event: "Holiday Quarter Earnings and Global iPhone 16 Channel Inventories",
         expectedImpact: "High",
         bias: "Neutral"
       },
       {
         horizon: "3-6 Months",
-        event: "Apple Intelligence International Localization (Chinese, Spanish, French) & WWDC Preview",
+        event: "Apple Intelligence Regional Language Releases and WWDC Preview",
         expectedImpact: "High",
         bias: "Positive"
       },
       {
         horizon: "6-12 Months",
-        event: "US District Court Rulings on DoJ Antitrust Claims & Google Default Search Payments",
+        event: "US District Court Antitrust Rulings Regarding Default Search Revenue",
         expectedImpact: "High",
         bias: "Negative"
       }
     ],
     riskMatrix: [
       {
-        category: "Regulatory & Antitrust",
-        risk: "Loss or renegotiation of Google search revenue sharing agreement (modeled at ~$18B-$20B of pure operating profit).",
+        category: "Regulatory Rulings",
+        risk: "Potential loss or restructuring of default search revenue share payments.",
         severity: "High",
-        mitigant: "Expansion of first-party Apple Search Ads and multi-model AI partnership monetization."
+        mitigant: "Growth in first-party Search Ads and non-exclusive search distribution agreements."
       },
       {
-        category: "Geographic Concentration",
-        risk: "Nationalistic preference for domestic smartphone hardware in Mainland China.",
+        category: "China Market Share",
+        risk: "Competition from domestic smartphone makers in mainland China.",
         severity: "Medium",
-        mitigant: "Rapid production and sales diversification into India, Southeast Asia, and Latin America."
+        mitigant: "Manufacturing and sales expansion across India and Southeast Asia."
       },
       {
-        category: "Hardware Margin Compression",
-        risk: "Rising semiconductor costs (TSMC 3nm wafer price hikes) pressuring hardware gross margins.",
+        category: "Component Costs",
+        risk: "Higher costs on advanced 3nm semiconductor wafers.",
         severity: "Low",
-        mitigant: "Significant scale purchasing leverage and shift toward higher ASP 'Pro' product mix (>65%)."
+        mitigant: "Volume purchasing agreements and a sales mix tilted toward higher-priced Pro models."
       }
     ],
     tokenEfficiencyMetrics: {
@@ -559,17 +559,17 @@ export const BENCHMARK_MEMOS: Record<string, InvestmentThesisMemo> = {
         title: "Apple Inc. Form 10-K (Fiscal Year Ended September 2025)",
         source: "Apple Investor Relations",
         url: "https://investor.apple.com",
-        relevance: "Services gross margin disclosures, active installed base statistics, and regional revenue splits."
+        relevance: "Services gross margins, active installed device counts, and regional revenues."
       },
       {
-        title: "Morgan Stanley GIR: Apple Intelligence Replacement Cycle Survey",
+        title: "Consumer Hardware Survey: Device Upgrade Intentions",
         source: "Morgan Stanley Research",
-        relevance: "Survey data on consumer upgrade intent and iPhone installed base age distribution."
+        relevance: "Survey results on customer replacement intentions and installed base age."
       },
       {
-        title: "US Department of Justice v. Apple Inc. Court Filings",
-        source: "US District Court for the District of New Jersey",
-        relevance: "Antitrust allegations regarding ecosystem interoperability and smartphone market power."
+        title: "US Department of Justice Legal Filings Regarding Platform Interoperability",
+        source: "US District Court for New Jersey",
+        relevance: "Legal arguments regarding app distribution and operating system integrations."
       }
     ]
   }

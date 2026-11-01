@@ -1,5 +1,5 @@
-# Product Requirements Document (PRD)
-## Project: Actioneer Deep Research — Institutional Stock Intelligence Prototype
+﻿# Product Requirements Document (PRD)
+## Project: Actioneer Deep Research  -  Institutional Stock Intelligence Prototype
 
 **Author:** Staff Software Engineer Candidate  
 **Target:** Actioneer Leadership & Engineering Assessment  
@@ -11,16 +11,16 @@
 ### 1. Executive Summary & Problem Statement
 
 #### 1.1 Context
-At Actioneer, the focus is on building voice-first customer engagement platforms that cheaply query enterprise data, navigate complex documents, and operate with extreme efficiency. In financial services—specifically equity research, investment banking, and capital allocation—analysts spend 15–20 hours per week parsing multi-thousand-page SEC 10-K/10-Q filings, earnings transcripts, and equity research notes.
+At Actioneer, the focus is on building voice-first customer engagement platforms that cheaply query enterprise data, navigate complex documents, and operate with extreme efficiency. In financial services - specifically equity research, investment banking, and capital allocation - analysts spend 15-20 hours per week parsing multi-thousand-page SEC 10-K/10-Q filings, earnings transcripts, and equity research notes.
 
 Existing "deep research" AI prototypes suffer from two fatal flaws:
-1. **Unstructured Token Bloat (Poor Token Efficiency):** Most agents fetch entire web pages and filings into raw LLM context windows, burning 60,000–120,000 tokens per query with heavy redundancy, high latency, and massive inference costs without incremental value.
+1. **Unstructured Token Bloat (Poor Token Efficiency):** Most agents fetch entire web pages and filings into raw LLM context windows, burning 60,000-120,000 tokens per query with heavy redundancy, high latency, and massive inference costs without incremental value.
 2. **Poor Readability & Aesthetics (Fails the "Banker Test"):** Generic LLM outputs dump unstructured markdown bullets, conversational chatter, or gaudy dark-mode futuristic interfaces that institutional investors and managing directors reject immediately.
 
 #### 1.2 The Solution: Actioneer Stock Intelligence (Apex Research)
 A deep-research product prototype engineered specifically for investment professionals:
 - **Banker-Grade Readability:** Pristine light aesthetic styled after Goldman Sachs Global Investment Research and Morgan Stanley equity memos. Clean typography, structured valuation scorecards, catalyst schedules, and probability-weighted scenario matrices.
-- **Radical Token Efficiency:** A 4-stage progressive distillation pipeline that reduces raw retrieved context by **70–82%** prior to final synthesis, explicitly tracking and displaying token savings, cost metrics, and information density scores.
+- **Radical Token Efficiency:** A 4-stage progressive distillation pipeline that reduces raw retrieved context by **70-82%** prior to final synthesis, explicitly tracking and displaying token savings, cost metrics, and information density scores.
 - **Auditability & Transcript Persistence:** Every agent thought, sub-query, tool retrieval, and compression step is written to deterministic transcript files stored in a single audit directory (`transcripts/`) with an in-app audit viewer.
 
 ---
@@ -31,7 +31,7 @@ A deep-research product prototype engineered specifically for investment profess
 |---|---|---|
 | **Investment Banking Analyst / Associate** | Needs quick, crisp company tear-sheets and thesis memos with verifiable valuation multiples under tight deadlines. | Generates a 2-page equivalent institutional thesis memo in <30 seconds with clean tables, key catalysts, and bull/bear cases. |
 | **Buy-Side Portfolio Manager** | Drowning in noisy 80-page broker reports; needs clear thesis pillars and asymmetric risk/reward skew. | Formats research around 3 concrete thesis pillars, valuation sensitivity, and probability-weighted price drivers. |
-| **Enterprise CFO / Corp Dev Lead** | High cost and token burn running automated AI workflows across hundreds of portfolio/target companies. | Built-in Token Efficiency Engine proving low cost-per-run ($0.03–$0.08 vs $0.35+ standard) and measurable token compression. |
+| **Enterprise CFO / Corp Dev Lead** | High cost and token burn running automated AI workflows across hundreds of portfolio/target companies. | Built-in Token Efficiency Engine proving low cost-per-run ($0.03-$0.08 vs $0.35+ standard) and measurable token compression. |
 
 ---
 
@@ -71,7 +71,7 @@ A deep-research product prototype engineered specifically for investment profess
   3. **3 Thesis Pillars:** Clear hypotheses with quantifiable data proof points.
   4. **Financial Health & Valuation Matrix:** P/E (NTM), EV/EBITDA, FCF Yield, Net Debt/EBITDA, Revenue CAGR.
   5. **Scenario Analysis (Bull / Base / Bear):** Target price, probability %, key assumptions.
-  6. **Catalyst Schedule:** Horizon (0–3m, 3–6m, 6–12m), Catalyst description, expected directional impact.
+  6. **Catalyst Schedule:** Horizon (0-3m, 3-6m, 6-12m), Catalyst description, expected directional impact.
   7. **Risk Matrix & Mitigants:** Downside scenario, severity, mitigation path.
   8. **Citations & References:** Clickable verifiable primary sources.
 
@@ -94,7 +94,7 @@ A deep-research product prototype engineered specifically for investment profess
 ---
 
 ### 4. Non-Functional Requirements
-- **Performance:** End-to-end execution within 5–15 seconds for cached/distilled pipelines; progressive streaming progress states.
+- **Performance:** End-to-end execution within 5-15 seconds for cached/distilled pipelines; progressive streaming progress states.
 - **Reliability:** Graceful fallbacks if external search APIs rate-limit or fail; zero white-screen errors.
 - **Deployability:** Single command startup (`npm run dev`), production build (`npm run build`), ready for zero-config Vercel/Railway deployment.
 - **Maintainability:** Modular, typed TypeScript codebase with clean separation between UI components, research agent orchestrator, and transcript storage.
@@ -106,4 +106,5 @@ A deep-research product prototype engineered specifically for investment profess
 2. **Token Efficiency:** Measurable >65% reduction in context tokens utilized compared to standard unconstrained agent scrapers.
 3. **Auditability:** 100% of runs logged to disk in `transcripts/` and accessible both in filesystem and UI.
 4. **Banker Polish:** Zero dark-mode glow, zero cartoonish UI; matches Goldman Sachs / Morgan Stanley research portal standards.
+
 

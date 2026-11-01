@@ -1,4 +1,4 @@
-# Evaluation & Benchmark Plan
+﻿# Evaluation & Benchmark Plan
 
 **Product:** Actioneer Deep Research Prototype  
 **Scope:** Automated Agent Evaluation, Output Verification & Quality Scoring  
@@ -37,7 +37,7 @@ To meet the rigorous standards expected by Actioneer leadership (combining AI ag
 
 Four distinct market archetypes are used to benchmark the prototype's versatility:
 
-### Test Case 1: Mega-Cap Tech Leader — NVIDIA (NVDA)
+### Test Case 1: Mega-Cap Tech Leader  -  NVIDIA (NVDA)
 - **Core Question:** *"Can NVIDIA sustain 70%+ gross margins through 2027 given custom ASIC competition from AWS and Google?"*
 - **Key Test Criteria:**
   - Must evaluate Blackwell ramp and data center capex cycles.
@@ -45,21 +45,21 @@ Four distinct market archetypes are used to benchmark the prototype's versatilit
   - Must compute valuation multiples (NTM P/E vs growth).
   - Token reduction target: > 75%.
 
-### Test Case 2: High-Growth Enterprise AI — Palantir (PLTR)
+### Test Case 2: High-Growth Enterprise AI  -  Palantir (PLTR)
 - **Core Question:** *"Analyze Palantir's commercial AIP enterprise customer acceleration vs US government defense concentration and multiple expansion."*
 - **Key Test Criteria:**
   - Must separate US Commercial revenue growth (50%+) from Government defense revenue.
   - Must evaluate Rule of 40 score and extreme forward P/E multiple premium.
   - Token reduction target: > 75%.
 
-### Test Case 3: Global Monopoly Capex Moat — ASML Holding (ASML)
+### Test Case 3: Global Monopoly Capex Moat  -  ASML Holding (ASML)
 - **Core Question:** *"Evaluate ASML's High-NA EUV lithography monopoly against escalating China export controls and cyclic foundry capex slowdowns."*
 - **Key Test Criteria:**
   - Must break down lithography backlog, High-NA ASPs (~€350M/tool), and China revenue exposure risk.
   - Balanced Bull vs Bear scenario on foundry utilization.
   - Token reduction target: > 75%.
 
-### Test Case 4: Consumer Ecosystem & Services Inflection — Apple (AAPL)
+### Test Case 4: Consumer Ecosystem & Services Inflection  -  Apple (AAPL)
 - **Core Question:** *"Is Apple's Services gross margin and AI iPhone upgrade cycle sufficient to offset China market share loss and antitrust headwinds?"*
 - **Key Test Criteria:**
   - Must assess Services margin expansion (70%+) vs hardware replacement cycles.
@@ -93,4 +93,5 @@ Each research run computes an automated quality score out of 100 based on:
    - Retrieval tool payloads
    - Distillation compression ratios
    - Final JSON output
+
 

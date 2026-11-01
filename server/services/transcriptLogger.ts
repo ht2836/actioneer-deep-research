@@ -70,7 +70,7 @@ function generateTranscriptMarkdown(t: AgentTranscript): string {
   const outputTokens = t.steps.find((s: AgentStepTrace) => s.phase === 'THESIS_SYNTHESIS')?.tokensOut || 1180;
   const tokensSaved = t.rawInputTokens - t.distilledTokens;
 
-  return `# Actioneer Deep Research — Agent Execution Trace
+  return `# Actioneer Deep Research: Agent Execution Trace
 **Run ID:** \`${t.runId}\`  
 **Ticker:** \`${t.ticker}\`  
 **Timestamp:** ${t.timestamp}  

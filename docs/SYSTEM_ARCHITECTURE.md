@@ -1,4 +1,4 @@
-# System Architecture & Technical Design Document
+﻿# System Architecture & Technical Design Document
 
 **Project:** Actioneer Deep Research Prototype  
 **Module:** System Architecture, Agent Orchestration & Storage  
@@ -65,7 +65,7 @@ The system is architected as an end-to-end, high-performance web platform compos
 - Collects raw search results, analyst commentary, and excerpted SEC 10-K/10-Q filing quotes.
 
 ### Phase 3: Token-Efficient Semantic Distillation
-- **Problem:** Raw financial web dumps contain boilerplate footers, disclaimer text, HTML noise, and repeated narrative padding (averaging 30,000–60,000 tokens).
+- **Problem:** Raw financial web dumps contain boilerplate footers, disclaimer text, HTML noise, and repeated narrative padding (averaging 30,000-60,000 tokens).
 - **Distillation Algorithm:**
   1. *Boilerplate Stripping:* Removes non-analytical disclaimers and styling artifacts.
   2. *Entity & Metric Extractor:* Extracts hard financial numbers (EPS, margins, guidance, multiples) and assigns them to typed schema keys.
@@ -202,4 +202,5 @@ interface AgentTranscript {
 - **API Key Security:** `PARALLEL_API_KEY` and other credentials reside strictly in server-side environment variables and are never leaked to client bundles.
 - **Fail-Safe Mock Engine:** If network or API limits occur, the system falls back seamlessly to internal high-fidelity financial datasets, ensuring zero presentation crashes during live recruiter evaluation.
 - **Sanitization:** All synthesized markdown and tables are validated against schema boundaries prior to rendering.
+
 

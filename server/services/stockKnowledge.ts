@@ -146,7 +146,7 @@ function createDynamicMemo(ticker: string, query: string): InvestmentThesisMemo 
     impliedUpsidePercent: 23.3,
     conviction: "HIGH",
     primaryQuestion: query,
-    executiveSummary: `We initiate coverage on ${ticker.toUpperCase()} with an OVERWEIGHT recommendation and a 12-month target price of $185.00 (+23.3% upside). Based on deep extraction of recent financial filings, management earnings call commentary, and consensus revisions, the company is experiencing favorable demand tailwinds that are not yet reflected in current valuation multiples.\n\nWhile macroeconomic headwinds and margin compression remain concerns in the bear scenario, recurring operating cash flow and high-margin product expansion provide a robust margin of safety for institutional investors.`,
+    executiveSummary: `We initiate coverage on ${ticker.toUpperCase()} with an OVERWEIGHT recommendation and a 12-month target price of $185.00 (+23.3% upside). Recent filings, earnings call transcripts, and consensus revisions show sales growth and product margins running ahead of current valuation multiples.\n\nWhile broader market slowdowns remain a factor in our downside scenario, operating cash flow and contract backlog provide solid valuation support.`,
     thesisPillars: [
       {
         title: "Product Inflection & Margin Expansion Cycle",

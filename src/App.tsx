@@ -102,8 +102,8 @@ export const App: React.FC = () => {
         onOpenTokenModal={() => setTokenModalOpen(true)}
       />
 
-      {/* Main Content Container */}
-      <main className="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-6">
+      {/* Main Content Container - Expanded Width & Accessibility */}
+      <main className="flex-1 w-full max-w-[1560px] mx-auto px-4 sm:px-6 lg:px-10 py-8" role="main">
         
         {/* Research Input Bar */}
         <ResearchInput

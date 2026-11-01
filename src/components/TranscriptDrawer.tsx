@@ -81,8 +81,8 @@ export const TranscriptDrawer: React.FC<TranscriptDrawerProps> = ({
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 z-50 overflow-hidden bg-slate-900/40 backdrop-blur-xs flex justify-end no-print">
-      <div className="w-full max-w-4xl bg-white h-full shadow-2xl flex flex-col border-l border-slate-300 animate-slideLeft">
+    <div className="fixed inset-0 z-50 overflow-hidden bg-slate-900/40 backdrop-blur-xs flex justify-end no-print" role="dialog" aria-modal="true" aria-label="Agent Transcripts Audit Ledger">
+      <div className="w-full max-w-5xl md:max-w-6xl bg-white h-full shadow-2xl flex flex-col border-l border-slate-300 animate-slideLeft">
         {/* Drawer Header */}
         <div className="px-6 py-4 bg-slate-900 text-white flex items-center justify-between border-b border-slate-800">
           <div className="flex items-center space-x-3">

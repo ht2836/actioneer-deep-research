@@ -1,4 +1,4 @@
-# Actioneer Interview & Demo Preparation Guide
+﻿# Actioneer Interview & Demo Preparation Guide
 ## How to Pitch, Demonstrate, and Defend the Deep Research Prototype
 
 ---
@@ -74,7 +74,7 @@ All agent research traces are permanently saved in:
 
 #### Q3: "How does this map to what we do at Actioneer (voice-first customer engagement & complex enterprise docs)?"
 > **Model Answer:**  
-> *"In voice-first customer engagement, latency and cost are everything. You cannot stream 50,000 tokens of raw policy documents or loan agreements into an LLM while a customer is on the phone. The exact principles implemented here—pre-filtering boilerplate, schema distillation, and strict factual density—are what enable voice agents to query enterprise data cheaply and respond within 300–500 milliseconds without hallucinating."*
+> *"In voice-first customer engagement, latency and cost are everything. You cannot stream 50,000 tokens of raw policy documents or loan agreements into an LLM while a customer is on the phone. The exact principles implemented here - pre-filtering boilerplate, schema distillation, and strict factual density - are what enable voice agents to query enterprise data cheaply and respond within 300-500 milliseconds without hallucinating."*
 
 #### Q4: "What would you build next if this went into production tomorrow?"
 > **Model Answer:**  
@@ -82,3 +82,5 @@ All agent research traces are permanently saved in:
 > 1. **Streaming Server-Sent Events (SSE):** Stream intermediate agent findings in real-time as each parallel sub-query resolves.  
 > 2. **Monte Carlo DCF Engine:** Embed an in-browser financial modeling engine allowing analysts to dynamically adjust discount rates and terminal multiples.  
 > 3. **Automated LLM-as-a-Judge Hallucination Evaluator:** Run an automated cross-check verifying every synthetic claim against the raw SEC filing text before displaying the memo."*
+
+

@@ -111,13 +111,15 @@ export const ResearchInput: React.FC<ResearchInputProps> = ({
             value={inputValue}
             onChange={(e) => setInputValue(e.target.value)}
             disabled={isLoading}
+            aria-label="Investment question or ticker symbol"
             placeholder="e.g. Can NVIDIA sustain 70%+ gross margins? or TSLA, MSFT, PLTR, AMZN..."
             className="w-full pl-12 pr-28 py-3.5 bg-slate-50 border border-slate-300 rounded-lg text-sm text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-slate-900 focus:bg-white transition-all disabled:opacity-60"
           />
           <button
             type="submit"
             disabled={!inputValue.trim() || isLoading}
-            className="absolute right-2 px-4 py-2 rounded-md bg-slate-900 text-white text-xs font-semibold hover:bg-slate-800 disabled:opacity-40 disabled:cursor-not-allowed transition-all flex items-center space-x-1.5 shadow-sm active:scale-95"
+            aria-label="Execute research thesis"
+            className="absolute right-2 px-4 py-2 rounded-md bg-slate-900 text-white text-xs font-semibold hover:bg-slate-800 disabled:opacity-40 disabled:cursor-not-allowed transition-all flex items-center space-x-1.5 shadow-sm active:scale-95 focus:outline-none focus:ring-2 focus:ring-slate-900 focus:ring-offset-1"
           >
             {isLoading ? (
               <span className="flex items-center space-x-1">

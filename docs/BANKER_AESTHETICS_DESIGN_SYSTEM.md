@@ -1,4 +1,4 @@
-# Banker Aesthetics & Readability Design System
+﻿# Banker Aesthetics & Readability Design System
 
 **Target Audience:** Managing Directors, Equity Research Heads, Institutional Bankers  
 **Benchmark Publications:** Goldman Sachs GIR, Morgan Stanley Equity Research, Bloomberg Intelligence  
@@ -12,7 +12,7 @@ Institutional financial professionals reject typical AI agent interfaces because
 
 **A banker demands:**
 1. **Immediate Bottom Line Up Front (BLUF):** Rating, Target Price, Implied Upside, and Conviction visible within 1 second.
-2. **Tabular Precision:** Numbers belong in structured tables with aligned decimals and period labels—not buried in 5-line conversational sentences.
+2. **Tabular Precision:** Numbers belong in structured tables with aligned decimals and period labels - not buried in 5-line conversational sentences.
 3. **Structured Hierarchy:** Exactly 3 core thesis pillars, a balanced bull vs. bear scenario table, and a time-horizon catalyst schedule.
 4. **Clean, Restful Typography:** Crisp serif headers paired with ultra-clean sans-serif tabular numbers and neutral slate borders.
 5. **Print & PDF Perfection:** The output must look like a \$5,000 equity research tear-sheet ready to hand to an investment committee.
@@ -32,7 +32,7 @@ Institutional financial professionals reject typical AI agent interfaces because
 - **Neutral / Informational Accents:** Bankers Cobalt (`#2563EB` / bg `#EFF6FF`).
 
 ### 2.2 Typography Stack
-- **Document & Section Headers:** Serif authority stack (`Newsreader`, `Merriweather`, `Georgia`, serif) — evokes Wall Street Journal / Financial Times editorial rigor.
+- **Document & Section Headers:** Serif authority stack (`Newsreader`, `Merriweather`, `Georgia`, serif)  -  evokes Wall Street Journal / Financial Times editorial rigor.
 - **Body & Explanatory Text:** Modern clean sans (`Inter`, `-apple-system`, `BlinkMacSystemFont`, `Segoe UI`, sans-serif).
 - **Financial Multiples & Numbers:** Tabular lining numerals (`font-mono`, `Geist Mono`, `Courier New`) ensuring columns align vertically.
 
@@ -75,4 +75,5 @@ The output research memo is divided into 7 standardized sections:
 - **Copy / Export Quick Actions:** Instant "Copy Markdown", "Download JSON", and "Print Tear-Sheet" buttons.
 - **Step-by-Step Research Drawer:** Allows drilling down into the exact tool payloads and LLM prompts without cluttering the clean financial report.
 - **Filterable Presets:** Quick-select chips at the top so any evaluator can click between NVDA, PLTR, ASML, and AAPL with zero typing.
+
 
