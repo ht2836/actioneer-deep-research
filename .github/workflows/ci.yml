@@ -1,0 +1,45 @@
+name: CI & Deep Research Verification
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  verify-and-test:
+    name: Build & Verify Pipeline
+    runs-on: ubuntu-latest
+
+    env:
+      PARALLEL_API_KEY: ${{ secrets.PARALLEL_API_KEY }}
+      PARALLEL_API_URL: ${{ secrets.PARALLEL_API_URL || 'https://api.parallel.ai/v1' }}
+      NODE_ENV: production
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'npm'
+
+      - name: Install Dependencies
+        run: npm install
+
+      - name: Verify Parallel Key Availability
+        run: |
+          if [ -n "$PARALLEL_API_KEY" ]; then
+            echo "✓ PARALLEL_API_KEY loaded from GitHub Secrets."
+          else
+            echo "ℹ PARALLEL_API_KEY secret not detected; pipeline running on deterministic engine."
+          fi
+
+      - name: Run Production Build
+        run: npm run build
+
+      - name: Execute Verification Suite
+        run: npm run test

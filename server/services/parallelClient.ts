@@ -1,9 +1,6 @@
 import dotenv from 'dotenv';
 dotenv.config();
 
-const PARALLEL_API_KEY = process.env.PARALLEL_API_KEY;
-const PARALLEL_API_URL = process.env.PARALLEL_API_URL || 'https://api.parallel.ai/v1';
-
 export interface ParallelResearchResult {
   source: 'parallel_api' | 'local_distilled_engine';
   rawContent?: string;
@@ -12,11 +9,24 @@ export interface ParallelResearchResult {
 }
 
 /**
+ * Returns active Parallel API credentials from environment (local .env or GitHub Secrets / runner env)
+ */
+export function getParallelConfig() {
+  const apiKey = process.env.PARALLEL_API_KEY?.trim();
+  const apiUrl = process.env.PARALLEL_API_URL?.trim() || 'https://api.parallel.ai/v1';
+  const hasKey = Boolean(apiKey && apiKey !== 'mock_mode' && apiKey !== 'your_parallel_api_key_here');
+  return { apiKey, apiUrl, hasKey };
+}
+
+/**
  * Executes deep research using Parallel Web Systems Deep Research / Task API
+ * Consumes PARALLEL_API_KEY from environment (GitHub Secrets in CI/CD or .env locally).
  * Falls back gracefully to internal deterministic engine if key is absent or request times out.
  */
 export async function queryParallelDeepResearch(prompt: string): Promise<ParallelResearchResult> {
-  if (!PARALLEL_API_KEY || PARALLEL_API_KEY === 'mock_mode' || PARALLEL_API_KEY === 'your_parallel_api_key_here') {
+  const { apiKey, apiUrl, hasKey } = getParallelConfig();
+
+  if (!hasKey || !apiKey) {
     return {
       source: 'local_distilled_engine',
     };
@@ -28,11 +38,11 @@ export async function queryParallelDeepResearch(prompt: string): Promise<Paralle
     console.log(`[Parallel API] Initiating deep research task for: "${prompt.substring(0, 60)}..."`);
     
     // 1. Dispatch Task Run to Parallel API
-    const response = await fetch(`${PARALLEL_API_URL}/tasks/runs`, {
+    const response = await fetch(`${apiUrl}/tasks/runs`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        'x-api-key': PARALLEL_API_KEY,
+        'x-api-key': apiKey,
       },
       body: JSON.stringify({
         input: prompt,
