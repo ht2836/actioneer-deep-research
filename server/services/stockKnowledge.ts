@@ -261,7 +261,8 @@ function createDynamicMemo(ticker: string, query: string): InvestmentThesisMemo 
     citations: [
       {
         title: "SEC Form 10-Q & Financial Press Releases",
-        source: "Company Investor Relations",
+        source: "Company Investor Relations / SEC EDGAR",
+        url: "https://www.sec.gov/edgar/searchedgar/companysearch",
         relevance: "Historical balance sheet, statement of operations, and segment metrics."
       },
       {

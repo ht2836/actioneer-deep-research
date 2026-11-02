@@ -1,0 +1,65 @@
+{
+  "runId": "run_1793613952672_d2a4f",
+  "timestamp": "2026-11-02T10:05:52.685Z",
+  "userPrompt": "Can NVIDIA sustain 70%+ gross margins through 2027 given custom ASIC competition from AWS and Google?",
+  "ticker": "NVDA",
+  "executionDurationMs": 2413,
+  "model": "gemini-1.5-pro-distill / parallel-research-v1",
+  "totalTokensBurned": 94400,
+  "rawInputTokens": 78400,
+  "distilledTokens": 14200,
+  "tokenSavingsPercentage": 80.4,
+  "costSavedUsd": 0.344,
+  "steps": [
+    {
+      "stepNumber": 1,
+      "phase": "DECOMPOSITION",
+      "name": "Intent Decomposition & Hypothesis Structuring",
+      "description": "Parsed user question into 4 targeted equity research vectors for ticker NVDA.",
+      "toolCalled": "AgentQueryDecomposer",
+      "inputPayloadSummary": "Query: \"Can NVIDIA sustain 70%+ gross margins through 2027 given custom ASIC competition from AWS and Google?\"",
+      "outputSummary": "Generated 4 sub-queries: (1) FY25/26 Revenue & Margin Trajectory, (2) Moat Durability & Competitive ASIC/Peer Threat, (3) Multiple Compression vs Historical Averages, (4) Bear Catalysts & Downside Tail Risks.",
+      "tokensIn": 340,
+      "tokensOut": 620,
+      "durationMs": 410
+    },
+    {
+      "stepNumber": 2,
+      "phase": "PARALLEL_RETRIEVAL",
+      "name": "Parallelized Institutional Document & Consensus Ingestion",
+      "description": "Dispatched parallel requests to Parallel Deep Research API, SEC EDGAR 10-K/10-Q parser, and consensus financial database.",
+      "toolCalled": "ParallelDeepResearchAPI::BatchRetrieve",
+      "inputPayloadSummary": "Sub-queries 1-4 dispatched across SEC 10-Q, Street Consensus Multiples, and Earnings Call Transcripts for NVIDIA Corporation.",
+      "outputSummary": "Retrieved 4 raw data streams: SEC 10-Q (34,800 chars), Street Consensus Table (18,400 chars), Q3/Q4 Earnings Call Transcript Excerpts (42,600 chars), and Broker Note Multiples (21,500 chars). Raw tokens: 78,400.",
+      "tokensIn": 1250,
+      "tokensOut": 78400,
+      "durationMs": 1450
+    },
+    {
+      "stepNumber": 3,
+      "phase": "TOKEN_DISTILLATION",
+      "name": "Progressive Semantic Distillation & Schema Extraction",
+      "description": "Filtered legal disclaimers, repeated marketing boilerplate, HTML wrappers, and deduplicated news mentions. Converted unstructured context into typed numerical schemas.",
+      "toolCalled": "SemanticDistillationEngine::SchemaCompress",
+      "inputPayloadSummary": "Raw context stream of 78,400 tokens passed through entity extractors and tabular compressors.",
+      "outputSummary": "Context compressed to 14,200 tokens (80.4% reduction). Zero loss of core financial metrics (EPS, gross margins, EV/EBITDA, segment revenue).",
+      "tokensIn": 78400,
+      "tokensOut": 14200,
+      "durationMs": 820
+    },
+    {
+      "stepNumber": 4,
+      "phase": "THESIS_SYNTHESIS",
+      "name": "Banker-Grade Institutional Memo Generation",
+      "description": "Synthesized distilled context into structured institutional tear-sheet layout adhering to Goldman Sachs / Morgan Stanley research guidelines.",
+      "toolCalled": "BankerThesisSynthesizer::JSONSchema",
+      "inputPayloadSummary": "Structured distilled context (14,200 tokens) + Wall Street Tear-Sheet Prompt Guidelines.",
+      "outputSummary": "Generated OVERWEIGHT recommendation with $175 target price, 3 quantified thesis pillars, scenario sensitivity matrix, and catalyst timeline. Final output tokens: 1,180.",
+      "tokensIn": 15150,
+      "tokensOut": 1180,
+      "durationMs": 1120
+    }
+  ],
+  "finalMemoId": "memo_nvda_20261102",
+  "summary": "Autonomous deep research executed for NVDA (NVIDIA Corporation). Recommendation: OVERWEIGHT (Target: $175, Implied: +26.6%). Token compression saved 63,020 tokens (80.4% reduction)."
+}

@@ -129,7 +129,7 @@ export const BENCHMARK_MEMOS: Record<string, InvestmentThesisMemo> = {
       {
         title: "SEC Form 10-Q (Q3 FY25 Ended October 2025)",
         source: "NVIDIA Investor Relations",
-        url: "https://ir.nvidia.com",
+        url: "https://investor.nvidia.com/financial-info/sec-filings",
         relevance: "Data Center segment revenue, gross margins, and wafer supply commitments."
       },
       {
@@ -272,7 +272,7 @@ export const BENCHMARK_MEMOS: Record<string, InvestmentThesisMemo> = {
       {
         title: "SEC Form 10-Q (Q3 2025)",
         source: "Palantir Investor Relations",
-        url: "https://investors.palantir.com",
+        url: "https://investors.palantir.com/financials/sec-filings",
         relevance: "Commercial versus government customer segmentation and Rule of 40 metrics."
       },
       {
@@ -415,7 +415,7 @@ export const BENCHMARK_MEMOS: Record<string, InvestmentThesisMemo> = {
       {
         title: "Q3 2025 Financial Results and Backlog Summary",
         source: "ASML Investor Relations",
-        url: "https://www.asml.com/investors",
+        url: "https://www.asml.com/en/investors",
         relevance: "Net bookings data, EUV versus DUV revenue split, and forward revenue guidance."
       },
       {
@@ -558,7 +558,7 @@ export const BENCHMARK_MEMOS: Record<string, InvestmentThesisMemo> = {
       {
         title: "Apple Inc. Form 10-K (Fiscal Year Ended September 2025)",
         source: "Apple Investor Relations",
-        url: "https://investor.apple.com",
+        url: "https://investor.apple.com/sec-filings/",
         relevance: "Services gross margins, active installed device counts, and regional revenues."
       },
       {
