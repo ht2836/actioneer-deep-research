@@ -1,9 +1,9 @@
 {
-  "runId": "run_1793566059789_x3n19",
-  "timestamp": "2026-11-01T20:47:39.796Z",
+  "runId": "run_1793603095749_vw8v1",
+  "timestamp": "2026-11-02T07:04:55.753Z",
   "userPrompt": "Evaluate Tesla Robotaxi unit economics and FSD take-rate monetization",
   "ticker": "TSLA",
-  "executionDurationMs": 2407,
+  "executionDurationMs": 2404,
   "model": "gemini-1.5-pro-distill / parallel-research-v1",
   "totalTokensBurned": 78420,
   "rawInputTokens": 64500,
@@ -60,6 +60,6 @@
       "durationMs": 1120
     }
   ],
-  "finalMemoId": "memo_tsla_1793566059789",
+  "finalMemoId": "memo_tsla_1793603095750",
   "summary": "Autonomous deep research executed for TSLA (TSLA Corporation). Recommendation: OVERWEIGHT (Target: $185, Implied: +23.3%). Token compression saved 51,200 tokens (79.4% reduction)."
 }

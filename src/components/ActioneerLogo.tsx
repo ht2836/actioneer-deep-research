@@ -28,3 +28,4 @@ export const ActioneerLogo: React.FC<ActioneerLogoProps> = ({
     </svg>
   );
 };
+

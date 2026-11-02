@@ -10,8 +10,9 @@
     "dev:client": "vite",
     "build": "tsc && vite build && tsc -p server/tsconfig.json",
     "start": "tsx server/index.ts",
-    "seed": "tsx server/seed.ts",
-    "test": "tsx test/verify.ts"
+    "seed": "tsx preparation/seed.ts",
+    "test": "tsx preparation/verify.ts",
+    "prep": "tsx preparation/prep.ts"
   },
   "dependencies": {
     "clsx": "^2.1.1",
