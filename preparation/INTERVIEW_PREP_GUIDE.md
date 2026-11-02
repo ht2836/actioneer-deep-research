@@ -78,8 +78,20 @@ All agent research traces are permanently saved in:
 
 #### Q4: "What would you build next if this went into production tomorrow?"
 > **Model Answer:**  
-> *"Three immediate extensions:  
-> 1. **Streaming Server-Sent Events (SSE):** Stream intermediate agent findings in real-time as each parallel sub-query resolves.  
-> 2. **Monte Carlo DCF Engine:** Embed an in-browser financial modeling engine allowing analysts to dynamically adjust discount rates and terminal multiples.  
-> 3. **Automated LLM-as-a-Judge Hallucination Evaluator:** Run an automated cross-check verifying every synthetic claim against the raw SEC filing text before displaying the memo."*
+> *"Four concrete extensions:  
+> 1. **System One (Jev) Pre-Filtering:** Introduce a discriminative decision model like Jev into the pre-synthesis pipeline. Because Jev charges zero for output tokens and evaluates structured choice and score questions in under 200ms, it can score and filter out 85% of incoming filing chunks before passing refined context to the generative synthesizer. That would cut query costs from seven cents down to under four cents.  
+> 2. **Streaming Server-Sent Events (SSE):** Stream intermediate agent findings in real time as each parallel sub-query resolves.  
+> 3. **Monte Carlo DCF Engine:** Embed an in-browser financial modeling engine allowing analysts to dynamically adjust discount rates and terminal multiples.  
+> 4. **Automated LLM-as-a-Judge Hallucination Evaluator:** Run an automated cross-check verifying every synthetic claim against the raw SEC filing text before displaying the memo."*
+
+---
+
+### 4. Advanced Technical Talking Point: Scaling with Jev
+
+If the interviewers ask how to scale the system for high-volume enterprise production at Actioneer:
+
+- **The Problem with Generative Pre-Filtering:** Standard LLMs (GPT-4o, Claude) are generative. Using them to filter or route text wastes output tokens on JSON syntax, reasoning tokens, and conversational overhead, making high-volume document triage expensive.
+- **The System One Approach (Jev):** Jev (by TypeSafe AI) is a non-generative discriminative model. It evaluates structured questions (`noul` boolean, `choice`, and `score`) directly over an input context.
+- **Key Economics:** Output tokens are billed at $0.00, and input tokens are $0.042 per million tokens with sub-200ms latency.
+- **Where It Fits in Actioneer's Workflows:** Use Jev in Phase 1 for intent classification and in Phase 3 for chunk-level relevance scoring across 100-page SEC filings or multi-party loan agreements. Discard irrelevant sections before the generative synthesizer runs, preserving factual density while cutting inference cost in half.
 
