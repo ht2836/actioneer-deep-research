@@ -83,38 +83,38 @@ export const MemoViewer: React.FC<MemoViewerProps> = ({ memo, onOpenTranscript }
           </div>
 
           {/* Quick Action Toolbar (No Print) */}
-          <div className="flex items-center space-x-2 no-print self-start lg:self-auto">
+          <div className="flex items-center space-x-2 no-print self-start lg:self-auto shrink-0 flex-wrap gap-y-2">
             <button
               onClick={handlePrint}
-              className="flex items-center space-x-1.5 px-3 py-1.5 rounded-md bg-slate-800 text-slate-200 hover:bg-slate-700 text-xs font-medium border border-slate-700 transition-colors shadow-sm"
+              className="shrink-0 whitespace-nowrap inline-flex items-center space-x-1.5 px-3 py-1.5 rounded-md bg-slate-800 text-slate-200 hover:bg-slate-700 text-xs font-medium border border-slate-700 transition-colors shadow-sm"
               title="Print institutional tear-sheet or save as PDF"
             >
-              <Printer className="w-3.5 h-3.5" />
+              <Printer className="w-3.5 h-3.5 shrink-0" />
               <span>Print / PDF</span>
             </button>
             <button
               onClick={handleCopyMarkdown}
-              className="flex items-center space-x-1.5 px-3 py-1.5 rounded-md bg-slate-800 text-slate-200 hover:bg-slate-700 text-xs font-medium border border-slate-700 transition-colors shadow-sm"
+              className="shrink-0 whitespace-nowrap inline-flex items-center space-x-1.5 px-3 py-1.5 rounded-md bg-slate-800 text-slate-200 hover:bg-slate-700 text-xs font-medium border border-slate-700 transition-colors shadow-sm"
               title="Copy memo as formatted Markdown"
             >
-              {copied ? <Check className="w-3.5 h-3.5 text-emerald-400" /> : <Copy className="w-3.5 h-3.5" />}
+              {copied ? <Check className="w-3.5 h-3.5 text-emerald-400 shrink-0" /> : <Copy className="w-3.5 h-3.5 shrink-0" />}
               <span>{copied ? 'Copied' : 'Copy MD'}</span>
             </button>
             <button
               onClick={handleDownloadJson}
-              className="flex items-center space-x-1.5 px-3 py-1.5 rounded-md bg-slate-800 text-slate-200 hover:bg-slate-700 text-xs font-medium border border-slate-700 transition-colors shadow-sm"
+              className="shrink-0 whitespace-nowrap inline-flex items-center space-x-1.5 px-3 py-1.5 rounded-md bg-slate-800 text-slate-200 hover:bg-slate-700 text-xs font-medium border border-slate-700 transition-colors shadow-sm"
               title="Download structured JSON"
             >
-              <Download className="w-3.5 h-3.5" />
+              <Download className="w-3.5 h-3.5 shrink-0" />
               <span>JSON</span>
             </button>
             {onOpenTranscript && (
               <button
                 onClick={onOpenTranscript}
-                className="flex items-center space-x-1.5 px-3 py-1.5 rounded-md bg-emerald-600 text-white hover:bg-emerald-500 text-xs font-semibold transition-colors shadow-sm"
+                className="shrink-0 whitespace-nowrap inline-flex items-center space-x-1.5 px-3 py-1.5 rounded-md bg-emerald-600 text-white hover:bg-emerald-500 text-xs font-semibold transition-colors shadow-sm"
                 title="View step-by-step agent audit trace"
               >
-                <FileText className="w-3.5 h-3.5" />
+                <FileText className="w-3.5 h-3.5 shrink-0" />
                 <span>Audit Trace</span>
               </button>
             )}
@@ -129,7 +129,7 @@ export const MemoViewer: React.FC<MemoViewerProps> = ({ memo, onOpenTranscript }
               Recommendation
             </div>
             <div className="mt-1">
-              <span className={`inline-block px-2.5 py-1 rounded text-xs font-bold font-mono border ${getRatingBadge(memo.rating)}`}>
+              <span className={`inline-flex items-center px-2.5 py-1 rounded text-xs font-bold font-mono border shrink-0 whitespace-nowrap ${getRatingBadge(memo.rating)}`}>
                 {memo.rating}
               </span>
             </div>
@@ -140,7 +140,7 @@ export const MemoViewer: React.FC<MemoViewerProps> = ({ memo, onOpenTranscript }
             <div className="text-[10px] font-mono uppercase tracking-wider text-slate-400">
               Target Price (12M)
             </div>
-            <div className="text-xl font-bold font-mono text-white mt-0.5">
+            <div className="text-xl sm:text-2xl font-bold font-mono text-white mt-0.5">
               ${memo.targetPrice.toFixed(2)}
             </div>
           </div>
@@ -150,9 +150,9 @@ export const MemoViewer: React.FC<MemoViewerProps> = ({ memo, onOpenTranscript }
             <div className="text-[10px] font-mono uppercase tracking-wider text-slate-400">
               Current / Implied Upside
             </div>
-            <div className="text-xl font-bold font-mono text-white mt-0.5 flex items-center space-x-1.5">
+            <div className="text-xl sm:text-2xl font-bold font-mono text-white mt-0.5 flex items-center space-x-1.5 shrink-0 whitespace-nowrap">
               <span>${memo.currentPrice.toFixed(2)}</span>
-              <span className={`text-xs px-1.5 py-0.5 rounded font-mono ${
+              <span className={`text-xs px-1.5 py-0.5 rounded font-mono font-semibold shrink-0 ${
                 memo.impliedUpsidePercent >= 0 ? 'text-emerald-400 bg-emerald-950/60' : 'text-red-400 bg-red-950/60'
               }`}>
                 {memo.impliedUpsidePercent >= 0 ? '+' : ''}{memo.impliedUpsidePercent}%
@@ -165,7 +165,7 @@ export const MemoViewer: React.FC<MemoViewerProps> = ({ memo, onOpenTranscript }
             <div className="text-[10px] font-mono uppercase tracking-wider text-slate-400">
               Conviction Level
             </div>
-            <div className="text-base font-bold text-slate-200 mt-1 font-mono">
+            <div className="text-base sm:text-lg font-bold text-slate-200 mt-1 font-mono shrink-0 whitespace-nowrap">
               {memo.conviction} CONVICTION
             </div>
           </div>
@@ -248,37 +248,37 @@ export const MemoViewer: React.FC<MemoViewerProps> = ({ memo, onOpenTranscript }
         {/* Section 3: Financial Health & Valuation Multiples Table */}
         <section>
           <div className="flex items-center space-x-2 pb-2 border-b border-slate-200 mb-4">
-            <TrendingUp className="w-4 h-4 text-slate-700" />
+            <TrendingUp className="w-4 h-4 text-slate-700 shrink-0" />
             <h2 className="text-base font-bold text-slate-900 uppercase tracking-wider font-mono">
               Financial Scorecard & Valuation Multiples
             </h2>
           </div>
-          <div className="overflow-x-auto border border-slate-200 rounded-lg">
+          <div className="overflow-x-auto border border-slate-200 rounded-lg shadow-xs">
             <table className="w-full text-xs text-left border-collapse">
               <thead>
                 <tr className="bg-slate-100 text-slate-700 font-mono text-[11px] uppercase border-b border-slate-200">
-                  <th className="py-2.5 px-3 font-semibold">Revenue (TTM)</th>
-                  <th className="py-2.5 px-3 font-semibold">YoY Growth</th>
-                  <th className="py-2.5 px-3 font-semibold">Gross Margin</th>
-                  <th className="py-2.5 px-3 font-semibold">Operating Margin</th>
-                  <th className="py-2.5 px-3 font-semibold">FCF Conversion</th>
-                  <th className="py-2.5 px-3 font-semibold">NTM P/E</th>
-                  <th className="py-2.5 px-3 font-semibold">EV/EBITDA</th>
-                  <th className="py-2.5 px-3 font-semibold">Rule of 40</th>
-                  <th className="py-2.5 px-3 font-semibold">Net Debt / EBITDA</th>
+                  <th className="py-2.5 px-3.5 font-semibold whitespace-nowrap">Revenue (TTM)</th>
+                  <th className="py-2.5 px-3.5 font-semibold whitespace-nowrap">YoY Growth</th>
+                  <th className="py-2.5 px-3.5 font-semibold whitespace-nowrap">Gross Margin</th>
+                  <th className="py-2.5 px-3.5 font-semibold whitespace-nowrap">Operating Margin</th>
+                  <th className="py-2.5 px-3.5 font-semibold whitespace-nowrap">FCF Conversion</th>
+                  <th className="py-2.5 px-3.5 font-semibold whitespace-nowrap">NTM P/E</th>
+                  <th className="py-2.5 px-3.5 font-semibold whitespace-nowrap">EV/EBITDA</th>
+                  <th className="py-2.5 px-3.5 font-semibold whitespace-nowrap">Rule of 40</th>
+                  <th className="py-2.5 px-3.5 font-semibold whitespace-nowrap">Net Debt / EBITDA</th>
                 </tr>
               </thead>
               <tbody className="font-mono text-slate-800 divide-y divide-slate-100">
                 <tr className="hover:bg-slate-50/80 transition-colors">
-                  <td className="py-3 px-3 font-bold">{memo.financialScorecard.revenueTTM}</td>
-                  <td className="py-3 px-3 font-bold text-emerald-700">{memo.financialScorecard.revenueGrowthYoY}</td>
-                  <td className="py-3 px-3">{memo.financialScorecard.grossMargin}</td>
-                  <td className="py-3 px-3">{memo.financialScorecard.operatingMargin}</td>
-                  <td className="py-3 px-3">{memo.financialScorecard.fcfConversion}</td>
-                  <td className="py-3 px-3 font-bold text-blue-700">{memo.financialScorecard.ntmPE}</td>
-                  <td className="py-3 px-3">{memo.financialScorecard.evEbitda}</td>
-                  <td className="py-3 px-3 font-bold text-emerald-700">{memo.financialScorecard.ruleOf40}</td>
-                  <td className="py-3 px-3">{memo.financialScorecard.netDebtToEbitda}</td>
+                  <td className="py-3 px-3.5 font-bold whitespace-nowrap">{memo.financialScorecard.revenueTTM}</td>
+                  <td className="py-3 px-3.5 font-bold text-emerald-700 whitespace-nowrap">{memo.financialScorecard.revenueGrowthYoY}</td>
+                  <td className="py-3 px-3.5 whitespace-nowrap">{memo.financialScorecard.grossMargin}</td>
+                  <td className="py-3 px-3.5 whitespace-nowrap">{memo.financialScorecard.operatingMargin}</td>
+                  <td className="py-3 px-3.5 whitespace-nowrap">{memo.financialScorecard.fcfConversion}</td>
+                  <td className="py-3 px-3.5 font-bold text-blue-700 whitespace-nowrap">{memo.financialScorecard.ntmPE}</td>
+                  <td className="py-3 px-3.5 whitespace-nowrap">{memo.financialScorecard.evEbitda}</td>
+                  <td className="py-3 px-3.5 font-bold text-emerald-700 whitespace-nowrap">{memo.financialScorecard.ruleOf40}</td>
+                  <td className="py-3 px-3.5 whitespace-nowrap">{memo.financialScorecard.netDebtToEbitda}</td>
                 </tr>
               </tbody>
             </table>

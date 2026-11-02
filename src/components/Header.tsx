@@ -31,25 +31,26 @@ export const Header: React.FC<HeaderProps> = ({
         </div>
 
         {/* System Badges & Actions */}
-        <div className="flex items-center space-x-3">
+        <div className="flex items-center space-x-2 sm:space-x-3 shrink-0">
           {/* Active Distillation Badge */}
           <button
             onClick={onOpenTokenModal}
-            className="flex items-center space-x-1.5 px-3 py-1.5 rounded-full bg-emerald-50 text-emerald-800 border border-emerald-200 text-xs font-medium hover:bg-emerald-100 transition-colors focus:outline-none focus:ring-2 focus:ring-emerald-500"
+            className="shrink-0 whitespace-nowrap inline-flex items-center space-x-1.5 px-2.5 sm:px-3 py-1.5 rounded-full bg-emerald-50 text-emerald-800 border border-emerald-200 text-xs font-medium hover:bg-emerald-100 transition-colors focus:outline-none focus:ring-2 focus:ring-emerald-500"
             title="Click to view Token Economics Framework"
             aria-label="View Token Distillation Architecture"
           >
-            <Zap className="w-3.5 h-3.5 text-emerald-600" />
-            <span className="font-semibold">Token Distillation: Active (~80% Savings)</span>
+            <Zap className="w-3.5 h-3.5 text-emerald-600 shrink-0" />
+            <span className="font-semibold hidden lg:inline">Token Distillation: Active (~80% Savings)</span>
+            <span className="font-semibold lg:hidden">~80% Token Savings</span>
           </button>
 
           {/* Transcript Audit Log Button */}
           <button
             onClick={onOpenTranscripts}
-            className="flex items-center space-x-2 px-3.5 py-1.5 rounded-md bg-slate-900 text-white text-xs font-semibold hover:bg-slate-800 transition-all shadow-sm active:scale-95 focus:outline-none focus:ring-2 focus:ring-slate-900 focus:ring-offset-1"
+            className="shrink-0 whitespace-nowrap inline-flex items-center space-x-2 px-3 sm:px-3.5 py-1.5 rounded-md bg-slate-900 text-white text-xs font-semibold hover:bg-slate-800 transition-all shadow-sm active:scale-95 focus:outline-none focus:ring-2 focus:ring-slate-900 focus:ring-offset-1"
             aria-label="Open Audit Transcripts Drawer"
           >
-            <Database className="w-3.5 h-3.5" />
+            <Database className="w-3.5 h-3.5 shrink-0" />
             <span>Audit Transcripts</span>
             <span className="px-1.5 py-0.5 rounded-full bg-slate-700 text-[11px] font-mono font-medium">
               {transcriptCount}

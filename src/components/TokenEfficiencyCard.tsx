@@ -27,9 +27,9 @@ export const TokenEfficiencyCard: React.FC<TokenEfficiencyCardProps> = ({
             <Zap className="w-4 h-4 text-emerald-700" />
           </div>
           <div>
-            <h3 className="text-sm font-bold text-slate-900 tracking-tight flex items-center space-x-2">
+            <h3 className="text-sm font-bold text-slate-900 tracking-tight flex items-center space-x-2 flex-wrap gap-y-1">
               <span>Token Efficiency & Progressive Distillation Ledger</span>
-              <span className="px-2 py-0.5 rounded-full text-[11px] font-semibold bg-emerald-100 text-emerald-800 border border-emerald-300">
+              <span className="shrink-0 whitespace-nowrap px-2 py-0.5 rounded-full text-[11px] font-semibold bg-emerald-100 text-emerald-800 border border-emerald-300">
                 {metrics.compressionPercentage}% Token Reduction
               </span>
             </h3>
@@ -39,13 +39,13 @@ export const TokenEfficiencyCard: React.FC<TokenEfficiencyCardProps> = ({
           </div>
         </div>
 
-        <div className="flex items-center space-x-2">
+        <div className="flex items-center space-x-2 shrink-0">
           <button
             type="button"
             onClick={() => setShowExplanation(!showExplanation)}
-            className="text-xs text-slate-600 hover:text-slate-900 flex items-center space-x-1 font-medium px-2.5 py-1 rounded-md border border-slate-200 hover:bg-slate-50 transition-colors"
+            className="shrink-0 whitespace-nowrap inline-flex items-center space-x-1 text-xs text-slate-600 hover:text-slate-900 font-semibold px-2.5 py-1 rounded-md border border-slate-200 hover:bg-slate-50 transition-colors"
           >
-            <Info className="w-3.5 h-3.5 text-slate-500" />
+            <Info className="w-3.5 h-3.5 text-slate-500 shrink-0" />
             <span>{showExplanation ? 'Hide Architecture' : 'How It Works'}</span>
           </button>
         </div>

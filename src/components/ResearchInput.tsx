@@ -74,11 +74,11 @@ export const ResearchInput: React.FC<ResearchInputProps> = ({
         </div>
 
         {/* Research Mode Selector */}
-        <div className="flex items-center space-x-1 p-1 bg-slate-100 rounded-lg text-xs font-medium self-start sm:self-auto">
+        <div className="flex items-center space-x-1 p-1 bg-slate-100 rounded-lg text-xs font-medium self-start sm:self-auto shrink-0">
           <button
             type="button"
             onClick={() => setMode('deep')}
-            className={`px-3 py-1 rounded-md transition-all ${
+            className={`shrink-0 whitespace-nowrap px-3 py-1 rounded-md transition-all ${
               mode === 'deep'
                 ? 'bg-white text-slate-900 shadow-sm font-semibold'
                 : 'text-slate-600 hover:text-slate-900'
@@ -89,7 +89,7 @@ export const ResearchInput: React.FC<ResearchInputProps> = ({
           <button
             type="button"
             onClick={() => setMode('fast')}
-            className={`px-3 py-1 rounded-md transition-all ${
+            className={`shrink-0 whitespace-nowrap px-3 py-1 rounded-md transition-all ${
               mode === 'fast'
                 ? 'bg-white text-slate-900 shadow-sm font-semibold'
                 : 'text-slate-600 hover:text-slate-900'
@@ -119,7 +119,7 @@ export const ResearchInput: React.FC<ResearchInputProps> = ({
             type="submit"
             disabled={!inputValue.trim() || isLoading}
             aria-label="Execute research thesis"
-            className="absolute right-2 px-4 py-2 rounded-md bg-slate-900 text-white text-xs font-semibold hover:bg-slate-800 disabled:opacity-40 disabled:cursor-not-allowed transition-all flex items-center space-x-1.5 shadow-sm active:scale-95 focus:outline-none focus:ring-2 focus:ring-slate-900 focus:ring-offset-1"
+            className="absolute right-2 shrink-0 whitespace-nowrap px-3.5 sm:px-4 py-2 rounded-md bg-slate-900 text-white text-xs font-semibold hover:bg-slate-800 disabled:opacity-40 disabled:cursor-not-allowed transition-all inline-flex items-center space-x-1.5 shadow-sm active:scale-95 focus:outline-none focus:ring-2 focus:ring-slate-900 focus:ring-offset-1"
           >
             {isLoading ? (
               <span className="flex items-center space-x-1">
