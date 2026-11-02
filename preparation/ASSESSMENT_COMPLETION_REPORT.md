@@ -1,4 +1,4 @@
-﻿# Actioneer Engineering Assessment  -  Completion & Executive Report
+# Actioneer Engineering Assessment  -  Completion & Executive Report
 
 **Candidate:** Experienced Software Engineer Applicant  
 **Position:** Software Engineer at Actioneer  
@@ -16,7 +16,7 @@ I have engineered an end-to-end, production-grade deep research prototype called
 1. **Banker-Grade Readability:** Clean, light Wall Street equity research layout (modeled after Goldman Sachs Global Investment Research and Morgan Stanley tear-sheets), featuring executive verdict banners, 3 structural thesis pillars, financial scorecard tables, scenario sensitivity matrices, and catalyst schedules.
 2. **Radical Token Efficiency:** A 4-tier progressive distillation architecture that reduces context tokens by **79.4%-81.9%**, delivering **4.3 validated facts per 100 output tokens** and cutting query cost from \$0.41 down to \$0.07.
 3. **Deterministic Transcript Auditability:** An automated trace logger writing structured `.json` and human-readable `.md` transcripts into a single dedicated directory (`transcripts/`), paired with an interactive in-app audit drawer.
-4. **Production Architecture & Documentation:** 6 comprehensive engineering and product specifications in `docs/` covering PRD, System Architecture, Token Efficiency, Banker Design System, Benchmark Plan, and Deployment.
+4. **Production Architecture & Documentation:** 6 comprehensive engineering and product specifications in `preparation/docs/` covering PRD, System Architecture, Token Efficiency, Banker Design System, Benchmark Plan, and Deployment.
 
 ---
 
@@ -24,12 +24,12 @@ I have engineered an end-to-end, production-grade deep research prototype called
 
 | Assessment Requirement | Technical Implementation | File / Component Reference |
 |---|---|---|
-| **User asks a stock/investing question** | Natural language research input with real-time intent parsing and 4 instant 1-click benchmark evaluation chips. | [`src/components/ResearchInput.tsx`](./src/components/ResearchInput.tsx), [`server/services/stockKnowledge.ts`](./server/services/stockKnowledge.ts) |
-| **Agent runs deep-research to fetch detailed stock thesis** | Multi-phase autonomous pipeline (Decomposition -> Parallel Retrieval -> Semantic Distillation -> Banker Synthesis). | [`server/services/stockKnowledge.ts`](./server/services/stockKnowledge.ts), [`src/components/ProgressTracker.tsx`](./src/components/ProgressTracker.tsx) |
-| **Readability of final output** | Institutional tear-sheet format: BLUF verdict, 3 Core Thesis Pillars with proof points, Valuation Scorecard table, Bull/Base/Bear scenarios, and Catalyst Timeline. | [`src/components/MemoViewer.tsx`](./src/components/MemoViewer.tsx), [`docs/BANKER_AESTHETICS_DESIGN_SYSTEM.md`](./docs/BANKER_AESTHETICS_DESIGN_SYSTEM.md) |
-| **Banker aesthetics (clean, light background)** | Pure white / alabaster canvas (`#FFFFFF` / `#F8FAFC`), midnight navy accents (`#0F172A`), Newsreader serif headers, and tabular lining numerals. Includes print stylesheet for 1-click PDF tear-sheets. | [`src/index.css`](./src/index.css), [`tailwind.config.js`](./tailwind.config.js) |
-| **Token-efficient final response** | 4-tier distillation (DOM stripping, schema extraction, density constraints). Real-time Token Economics Ledger displaying raw tokens, distilled tokens, savings %, and cost analysis. | [`src/components/TokenEfficiencyCard.tsx`](./src/components/TokenEfficiencyCard.tsx), [`docs/TOKEN_EFFICIENCY_SPEC.md`](./docs/TOKEN_EFFICIENCY_SPEC.md) |
-| **Store all transcripts in one location** | Immutable persistence to `transcripts/` (`.json` + `.md`). In-app Transcript Drawer allowing assessors to inspect step-by-step reasoning, prompts, and tokens. | [`transcripts/`](./transcripts), [`server/services/transcriptLogger.ts`](./server/services/transcriptLogger.ts), [`src/components/TranscriptDrawer.tsx`](./src/components/TranscriptDrawer.tsx) |
+| **User asks a stock/investing question** | Natural language research input with real-time intent parsing and 4 instant 1-click benchmark evaluation chips. | [`src/components/ResearchInput.tsx`](../src/components/ResearchInput.tsx), [`server/services/stockKnowledge.ts`](../server/services/stockKnowledge.ts) |
+| **Agent runs deep-research to fetch detailed stock thesis** | Multi-phase autonomous pipeline (Decomposition -> Parallel Retrieval -> Semantic Distillation -> Banker Synthesis). | [`server/services/stockKnowledge.ts`](../server/services/stockKnowledge.ts), [`src/components/ProgressTracker.tsx`](../src/components/ProgressTracker.tsx) |
+| **Readability of final output** | Institutional tear-sheet format: BLUF verdict, 3 Core Thesis Pillars with proof points, Valuation Scorecard table, Bull/Base/Bear scenarios, and Catalyst Timeline. | [`src/components/MemoViewer.tsx`](../src/components/MemoViewer.tsx), [`preparation/docs/BANKER_AESTHETICS_DESIGN_SYSTEM.md`](./docs/BANKER_AESTHETICS_DESIGN_SYSTEM.md) |
+| **Banker aesthetics (clean, light background)** | Pure white / alabaster canvas (`#FFFFFF` / `#F8FAFC`), midnight navy accents (`#0F172A`), Newsreader serif headers, and tabular lining numerals. Includes print stylesheet for 1-click PDF tear-sheets. | [`src/index.css`](../src/index.css), [`tailwind.config.js`](../tailwind.config.js) |
+| **Token-efficient final response** | 4-tier distillation (DOM stripping, schema extraction, density constraints). Real-time Token Economics Ledger displaying raw tokens, distilled tokens, savings %, and cost analysis. | [`src/components/TokenEfficiencyCard.tsx`](../src/components/TokenEfficiencyCard.tsx), [`preparation/docs/TOKEN_EFFICIENCY_SPEC.md`](./docs/TOKEN_EFFICIENCY_SPEC.md) |
+| **Store all transcripts in one location** | Immutable persistence to `transcripts/` (`.json` + `.md`). In-app Transcript Drawer allowing assessors to inspect step-by-step reasoning, prompts, and tokens. | [`transcripts/`](../transcripts), [`server/services/transcriptLogger.ts`](../server/services/transcriptLogger.ts), [`src/components/TranscriptDrawer.tsx`](../src/components/TranscriptDrawer.tsx) |
 
 ---
 
