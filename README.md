@@ -1,4 +1,4 @@
-﻿# Actioneer Deep Research  -  Institutional Stock Intelligence Prototype
+# Actioneer Deep Research  -  Institutional Stock Intelligence Prototype
 
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.7-blue.svg)](https://www.typescriptlang.org/)
 [![React](https://img.shields.io/badge/React-18.3-61dafb.svg)](https://react.dev/)
@@ -54,15 +54,15 @@ The production server serves both the compiled React frontend and the Express RE
 
 ## 📁 Architecture & Documentation Index
 
-Comprehensive technical and design specifications are located in the [`docs/`](./docs) directory:
+Comprehensive technical and design specifications are located in the [`preparation/docs/`](./preparation/docs) directory:
 
-1. [**`docs/PRD.md`**](./docs/PRD.md)  -  Product Requirements Document: User personas, functional requirements, success metrics, and BLUF requirements.
-2. [**`docs/SYSTEM_ARCHITECTURE.md`**](./docs/SYSTEM_ARCHITECTURE.md)  -  System Architecture & Technical Design: Layer breakdown, agent state machine, data schemas, and transcript audit storage.
-3. [**`docs/TOKEN_EFFICIENCY_SPEC.md`**](./docs/TOKEN_EFFICIENCY_SPEC.md)  -  Token Optimization Specification: Distillation mechanics, token waterfall analysis, and comparative benchmarks ($0.07 vs $0.41).
-4. [**`docs/BANKER_AESTHETICS_DESIGN_SYSTEM.md`**](./docs/BANKER_AESTHETICS_DESIGN_SYSTEM.md)  -  Design System Guide: Color tokens, typography hierarchy (Newsreader/Merriweather + tabular lining numerals), and tear-sheet layout.
-5. [**`docs/EVALUATION_AND_BENCHMARK.md`**](./docs/EVALUATION_AND_BENCHMARK.md)  -  Evaluation Plan: Automated scoring rubrics and 4 market archetype test cases.
-6. [**`docs/DEPLOYMENT_GUIDE.md`**](./docs/DEPLOYMENT_GUIDE.md)  -  Deployment Guide: Vercel, Railway, Render, Docker, and environment configuration.
-7. [**`ASSESSMENT_COMPLETION_REPORT.md`**](./ASSESSMENT_COMPLETION_REPORT.md)  -  Executive Assessment Delivery Summary for Actioneer Founders.
+1. [**`preparation/docs/PRD.md`**](./preparation/docs/PRD.md): Product Requirements Document detailing user personas, functional requirements, success metrics, and BLUF requirements.
+2. [**`preparation/docs/SYSTEM_ARCHITECTURE.md`**](./preparation/docs/SYSTEM_ARCHITECTURE.md): System Architecture and Technical Design detailing layer breakdown, agent state machine, data schemas, and transcript audit storage.
+3. [**`preparation/docs/TOKEN_EFFICIENCY_SPEC.md`**](./preparation/docs/TOKEN_EFFICIENCY_SPEC.md): Token Optimization Specification covering distillation mechanics, token waterfall analysis, and comparative benchmarks (\$0.07 vs \$0.41).
+4. [**`preparation/docs/BANKER_AESTHETICS_DESIGN_SYSTEM.md`**](./preparation/docs/BANKER_AESTHETICS_DESIGN_SYSTEM.md): Design System Guide detailing color tokens, typography hierarchy, and tear-sheet layout.
+5. [**`preparation/docs/EVALUATION_AND_BENCHMARK.md`**](./preparation/docs/EVALUATION_AND_BENCHMARK.md): Evaluation Plan with automated scoring rubrics and 4 market archetype test cases.
+6. [**`preparation/docs/DEPLOYMENT_GUIDE.md`**](./preparation/docs/DEPLOYMENT_GUIDE.md): Deployment Guide covering Render, Railway, Vercel, and Docker configuration.
+7. [**`preparation/ASSESSMENT_COMPLETION_REPORT.md`**](./preparation/ASSESSMENT_COMPLETION_REPORT.md): Executive Assessment Delivery Summary for Actioneer Founders.
 
 ---
 
