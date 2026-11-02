@@ -8,27 +8,25 @@
 
 Hi Sashank,
 
-Great speaking with you last week. Ahead of our conversation, I have built and deployed the deep research product prototype based on your specifications.
+I put together the deep research prototype we discussed.
 
-Here are the links to explore the work:
+Here are the links:
+- Live app: https://actioneer-deep-research.onrender.com
+- GitHub repo: https://github.com/ht2836/actioneer-deep-research
+- Agent transcripts: https://github.com/ht2836/actioneer-deep-research/tree/main/transcripts
 
-1. Live Product: https://actioneer-deep-research.onrender.com
-2. GitHub Repository: https://github.com/ht2836/actioneer-deep-research
-3. Agent Transcripts: https://github.com/ht2836/actioneer-deep-research/tree/main/transcripts
+A few notes on how I approached the requirements:
 
-Here is a brief overview of how the prototype addresses your focus areas:
+Output format and readability:
+Instead of a chat interface, the result renders as a single-page equity research tear sheet. It leads with a summary card showing the rating, target price, and upside, followed by thesis pillars, a financial scorecard, and a bull/base/bear scenario matrix. Numbers use tabular figures so columns align, set against a light background.
 
-- Readability and Banker Aesthetics:
-Instead of conversational chat bubbles or generic AI summaries, the output is formatted as an institutional equity research tear-sheet (modeled after Goldman Sachs and Morgan Stanley research notes). It leads with a Bottom-Line-Up-Front (BLUF) executive card showing the verdict, target price, and implied upside, followed by three quantified investment pillars, a financial scorecard, a bull/base/bear scenario matrix, and a risk ledger. The design uses crisp serif typography on a clean alabaster background, with monospace lining figures so financial figures align vertically in tables.
+Token efficiency:
+The pipeline strips boilerplate like safe harbor disclosures and navigation markup, then converts financial metrics into typed key-value pairs before synthesis. On a typical query, this reduces the working context from roughly 78k tokens to 14k tokens (about an 80% cut), bringing the model cost from $0.41 down to about $0.07 per run.
 
-- Radical Token Efficiency (~80% Compression):
-Rather than stuffing 70k+ tokens of raw HTML, regulatory boilerplate, and repeated navigation headers into the LLM context, the system uses a four-tier distillation pipeline. It prunes safe harbor disclaimers and extracts typed numerical schemas ({ metric, value, period }) prior to synthesis. This compresses context from ~78,400 raw tokens down to ~14,200 working tokens (an 80% reduction), while increasing factual density to 4.3 verified facts per 100 output tokens and reducing query costs from $0.41 to $0.07.
+Research flow and transcripts:
+Queries break into sub-tasks across filings, consensus data, and call transcripts. I structured the backend around Parallel's task run API (server/services/parallelClient.ts) with a local fallback. Each run writes step-by-step execution logs, durations, and token counts to the ./transcripts/ folder in both JSON and Markdown, which you can also open from the in-app audit drawer.
 
-- Deep Research Pipeline and Audit Transcripts:
-The engine decomposes user questions into four distinct research vectors across SEC filings, consensus multiples, and earnings call transcripts. It integrates with Parallel's Deep Research API architecture (server/services/parallelClient.ts) and logs full deterministic traces. All execution steps, tool invocations, token counts, and step durations are saved to the ./transcripts/ folder in both machine-readable JSON and human-readable Markdown. You can inspect these directly in the repo or interactively via the "Audit Transcripts" drawer in the live UI.
+Looking forward to walking you through the system next week.
 
-Looking forward to diving into the architecture with you next week and discussing how we can scale these agentic workflows at Actioneer.
-
-Best regards,
-
+Best,
 Harsh
